@@ -3,6 +3,7 @@
  */
 
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -10,35 +11,20 @@ module.exports = {
     },
     output: {
         path: './dist',
-        filename: '[name].min.js',
+        filename: 'scripts/[name].min.js',
     },
     module: {
         loaders: [
             {
                 test: /\.js$/,
                 loader: 'babel-loader?presets[]=es2015&compact=false'
-            },
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader'
+            }, {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             }
         ]
     },
-    vue: {
-        loaders: {
-            // same configuration rules as above
-        }
-    },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: "'" + process.env.NODE_ENV + "'"
-            }
-        })
+        new ExtractTextPlugin("css/[name].min.css"),
     ],
-    resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js'
-        }
-    }
 }

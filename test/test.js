@@ -1,12 +1,3 @@
-import Vue from 'vue';
-import Footer from '../components/Footer.vue';
+import {Footer} from '../index.js';
 
-
-Vue.use(Footer);
-
-
-new Vue(
-    {
-
-    }
-);
+Footer({'content': 'Footer', 'background_color': '#7893435'}).fire('footer');
