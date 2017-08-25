@@ -5,5 +5,5 @@ const footer = (data) => {
 };
 
 module.exports = {
-    Footer: footer
+    FcoFooter: footer
 };

@@ -1,3 +1,3 @@
-import {Footer} from '../index.js';
+import {FcoFooter} from '../index.js';
 
-Footer({'content': 'Footer', 'background_color': '#7893435'}).fire('footer');
+FcoFooter({'content': 'FcoFooter', 'background_color': '#789343'}).fire('footer');
