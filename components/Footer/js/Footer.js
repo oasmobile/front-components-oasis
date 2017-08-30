@@ -2,10 +2,11 @@ import '../css/footer.css';
 import langPackage from '../js/lang'
 
 export default class Footer {
-    constructor(data,options) {
+    constructor(data='',options) {
         this.lang = data.lang || 'en';
         this.data = data;
         this.langContent = langPackage[this.lang];
+        this.from = data.from || '';
         this.content = `<div id="foot" class="clearfix">
                             <div class="f-logo fl">
                                 <a href="//all.oasgames.com" rel="nofollow" target="_blank">
@@ -15,12 +16,12 @@ export default class Footer {
                                 </a>
                             </div>
                             <div class="bottext fl">
+                            <div>
                                 <a target="_blank" href="//company.oasgames.com/en/" rel="nofollow">About US</a>
                                 丨<a target="_blank" href="/PrivacyPolicy(EN).html">Privacy Policy </a>
                                 丨<a target="_blank" href="/TermsofService(EN).html">Terms of Service</a>
-                    
-                                丨<a target="_blank" href="http://en.forum.oasgames.com" rel="nofollow"> Forum</a>
-                    
+                        
+                            </div>
                                 <p>©2012-2017 OASIS GAMES LIMITED. All rights reserved.</p>
                                 <p>All trademarks referenced herein are the properties of their respective owners.</p>
                             </div>
@@ -40,6 +41,7 @@ export default class Footer {
                     </div>`;
         this.hl = '';
         this.options = options;
+
     }
 
     _renderHtml() {
@@ -52,12 +54,35 @@ export default class Footer {
     }
     fire(id) {
         let rootElement = document.getElementById(id);
+        this.Footerwarp = id;
         rootElement.innerHTML = this._renderHtml(this.data);
-        console.log(rootElement.children)
         if(rootElement.children.length == 2){
             rootElement.className = 'footer_box clearfix';
         }else{
             rootElement.className = '';
         }
+        return  this;
+    }
+    add(json){
+        // 添加链接 内容
+        this.alink = [];
+        this.linkHml = [];
+        let spikLink = document.querySelector('#'+this.Footerwarp+' .bottext');
+        console.log(spikLink);
+        for(var item in json){
+            this.alink.push(json[item]);
+            this.linkHml.push(item);
+        }
+        for(var i=0; i<this.alink.length; i++){
+            let a = document.createElement('a'),
+                span = document.createElement('span');
+            a.innerHTML = this.linkHml[i]+' ';
+            a.href = this.alink[i];
+            a.target = '_blank';
+            span.innerHTML = '| ';
+            span.appendChild(a);
+            spikLink.children[0].appendChild(span);
+        }
+
     }
 }
