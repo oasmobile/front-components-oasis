@@ -7,26 +7,27 @@ export default class Footer {
         this.data = data;
         this.from = data.from || '';
         this.options = data.option;
-
+        this.link_href = data.href || 'http://de.forum.oasgames.com';
+        this.lang_toCase = this.lang.toLocaleUpperCase();
     }
     _renderHtml() {
         this.langContent = langPackage[this.lang];
+        console.log(this.langContent);
         this.content = `<div id="foot" class="clearfix">
                             <div class="f-logo fl">
-                                <a href="//all.oasgames.com" rel="nofollow" target="_blank">
-                                    <img src="//www.oasgames.com/resource/widget/footer/white/images/u2.png"><br><img
-                                        src="//www.oasgames.com/resource/widget/footer/white/images/u4.png" width="93" height="16"
-                                        class="mar-t">
+                                <a href="//oasgames.com" rel="nofollow" target="_blank">
+                                    <img src="https://img.oasgames.com/upload/1505731497.png">
                                 </a>
                             </div>
                             <div class="bottext fl">
                             <div>
-                                <a target="_blank" href="//company.oasgames.com/en/" rel="nofollow">About US</a>
-                                丨<a target="_blank" href="/PrivacyPolicy(EN).html">Privacy Policy </a>
-                                丨<a target="_blank" href="/TermsofService(EN).html">Terms of Service</a>
+                                <a target="_blank" href="//company.oasgames.com/en/" rel="nofollow">${this.langContent.footer_abus}</a>
+                                丨<a target="_blank" href="https://www.oasgames.com/PrivacyPolicy(${this.lang_toCase}).html">${this.langContent.footer_pri}</a>
+                                丨<a target="_blank" href="https://www.oasgames.com/TermsofService(${this.lang_toCase}).html">${this.langContent.footer_term_ser}</a>
+                                <span>丨<a target="_blank" href="${this.link_href}">${this.langContent.footer_forum}</a></span>
                             </div>
-                                <p>©2012-2017 OASIS GAMES LIMITED. All rights reserved.</p>
-                                <p>All trademarks referenced herein are the properties of their respective owners.</p>
+                                <p>©2012-2017 ${this.langContent.footer_his}</p>
+                                <p>${this.langContent.footer_notice}</p>
                             </div>
                         </div>`;
         return this.content;
@@ -40,27 +41,11 @@ export default class Footer {
         }else{
             rootElement.className = '';
         }
-        return  this;
-    }
-    add(json){
-        // 添加链接 内容
-        this.alink = [];
-        this.linkHml = [];
-        let spikLink = document.querySelector('#'+this.Footerwarp+' .bottext');
-        for(var item in json){
-            this.alink.push(json[item]);
-            this.linkHml.push(item);
+        if(this.lang == 'zh'){
+            this.f_logo = document.querySelector('.f-logo img');
+            this.f_logo.src = 'https://img.oasgames.com/upload/1505731532.png';
+            document.querySelector('#foot').style.width = '685px';
+            this.f_logo.style.marginTop = '7px';
         }
-        for(var i=0; i<this.alink.length; i++){
-            let a = document.createElement('a'),
-                span = document.createElement('span');
-            a.innerHTML = this.linkHml[i]+' ';
-            a.href = this.alink[i];
-            a.target = '_blank';
-            span.innerHTML = '| ';
-            span.appendChild(a);
-            spikLink.children[0].appendChild(span);
-        }
-
     }
 }
