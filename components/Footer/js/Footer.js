@@ -3,29 +3,32 @@ import langPackage from '../js/lang'
 
 export default class Footer {
     constructor(data) {
-        this.lang = data.lang || 'en';
+        this.lang = data.lang || 'zh';
         this.from = data.from || '';
         this.options = data.option;
-        this.lang_toCase = this.lang.toLocaleUpperCase();
-        this.abus_href = data.abus_href || `//oasgames.com/en/`;
-        this.pri_href = data.pri_href || `https://www.oasgames.com/PrivacyPolicy(${this.lang_toCase}).html`;
-        this.term_ser_href = data.term_ser_href || `https://www.oasgames.com/PrivacyPolicy(${this.lang_toCase}).html`;
-        this.forum_href = data.forum_href || `http://${this.lang_toCase}.forum.oasgames.com`;
+        this.langToCase = this.lang.toLocaleUpperCase();
+        this.abusHref = data.abusHref || `//oasgames.com/en/`;
+        this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
+        this.termSerHref = data.termSerHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
+        this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
+        this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
+        this.footWidth = '609px';
+        this.logoMarginT = '0';
     }
     _renderHtml() {
         this.langContent = langPackage[this.lang];
-        this.content = `<div id="foot" class="clearfix">
+        this.content = `<div id="foot" class="clearfix" style="width:${this.footWidth};">
                             <div class="f-logo fl">
                                 <a href="//oasgames.com" rel="nofollow" target="_blank">
-                                    <img src="https://img.oasgames.com/upload/1505731497.png">
+                                    <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
                                 </a>
                             </div>
                             <div class="bottext fl">
                             <div>
-                                <a target="_blank" href="${this.abus_href}" rel="nofollow">${this.langContent.footer_abus}</a>
-                                丨<a target="_blank" href="${this.pri_href}">${this.langContent.footer_pri}</a>
-                                丨<a target="_blank" href="${this.term_ser_href}">${this.langContent.footer_term_ser}</a>
-                                <span>丨<a target="_blank" href="${this.forum_href}">${this.langContent.footer_forum}</a></span>
+                                <a target="_blank" href="${this.abusHref}" rel="nofollow">${this.langContent.footer_abus}</a>
+                                丨<a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
+                                丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>
+                                <span>丨<a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>
                             </div>
                                 <p>©2012-2017 ${this.langContent.footer_his}</p>
                                 <p>${this.langContent.footer_notice}</p>
@@ -35,18 +38,21 @@ export default class Footer {
     }
     fire(id) {
         let rootElement = document.getElementById(id);
-        this.Footerwarp = id;
+        this.rootElementID = rootElement;
+        this.zhHtml();
         rootElement.innerHTML = this._renderHtml();
-        if(this.options == 'ok'){
-            rootElement.className = 'footer_box clearfix';
-        }else{
-            rootElement.className = '';
+
+    }
+    zhHtml() {
+        if (this.options == 'ok') {
+            this.rootElementID.className = 'footer_box clearfix';
+        } else {
+            this.rootElementID.className = '';
         }
-        if(this.lang == 'zh'){
-            this.f_logo = document.querySelector('.f-logo img');
-            this.f_logo.src = 'https://img.oasgames.com/upload/1505731532.png';
-            document.querySelector('#foot').style.width = '685px';
-            this.f_logo.style.marginTop = '7px';
+        if (this.lang == 'zh') {
+            this.fLogo = 'https://img.oasgames.com/upload/1505731532.png';
+            this.footWidth = '685px';
+            this.logoMarginT = '7px';
         }
     }
 }
