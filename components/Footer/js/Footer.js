@@ -7,8 +7,11 @@ export default class Footer {
         this.data = data;
         this.from = data.from || '';
         this.options = data.option;
-        this.link_href = data.href || 'http://de.forum.oasgames.com';
         this.lang_toCase = this.lang.toLocaleUpperCase();
+        this.abus_href = data.abus_href || `//oasgames.com/en/`;
+        this.pri_href = data.pri_href || `https://www.oasgames.com/PrivacyPolicy(${this.lang_toCase}).html`;
+        this.term_ser_href = data.term_ser_href || `https://www.oasgames.com/PrivacyPolicy(${this.lang_toCase}).html`;
+        this.forum_href = data.forum_href || 'http://de.forum.oasgames.com';
     }
     _renderHtml() {
         this.langContent = langPackage[this.lang];
@@ -21,10 +24,10 @@ export default class Footer {
                             </div>
                             <div class="bottext fl">
                             <div>
-                                <a target="_blank" href="//company.oasgames.com/en/" rel="nofollow">${this.langContent.footer_abus}</a>
-                                丨<a target="_blank" href="https://www.oasgames.com/PrivacyPolicy(${this.lang_toCase}).html">${this.langContent.footer_pri}</a>
-                                丨<a target="_blank" href="https://www.oasgames.com/TermsofService(${this.lang_toCase}).html">${this.langContent.footer_term_ser}</a>
-                                <span>丨<a target="_blank" href="${this.link_href}">${this.langContent.footer_forum}</a></span>
+                                <a target="_blank" href="${this.abus_href}" rel="nofollow">${this.langContent.footer_abus}</a>
+                                丨<a target="_blank" href="${this.pri_href}">${this.langContent.footer_pri}</a>
+                                丨<a target="_blank" href="${this.term_ser_href}">${this.langContent.footer_term_ser}</a>
+                                <span>丨<a target="_blank" href="${this.forum_href}">${this.langContent.footer_forum}</a></span>
                             </div>
                                 <p>©2012-2017 ${this.langContent.footer_his}</p>
                                 <p>${this.langContent.footer_notice}</p>
