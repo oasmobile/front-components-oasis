@@ -10,11 +10,10 @@ export default class Footer {
         this.abus_href = data.abus_href || `//oasgames.com/en/`;
         this.pri_href = data.pri_href || `https://www.oasgames.com/PrivacyPolicy(${this.lang_toCase}).html`;
         this.term_ser_href = data.term_ser_href || `https://www.oasgames.com/PrivacyPolicy(${this.lang_toCase}).html`;
-        this.forum_href = data.forum_href || 'http://de.forum.oasgames.com';
+        this.forum_href = data.forum_href || `http://${this.lang_toCase}.forum.oasgames.com`;
     }
     _renderHtml() {
         this.langContent = langPackage[this.lang];
-        console.log(this.langContent);
         this.content = `<div id="foot" class="clearfix">
                             <div class="f-logo fl">
                                 <a href="//oasgames.com" rel="nofollow" target="_blank">
