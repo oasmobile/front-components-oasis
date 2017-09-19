@@ -7,7 +7,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        test: './footer.js'
+        test: './test.js'
     },
     output: {
         path: './dist',
