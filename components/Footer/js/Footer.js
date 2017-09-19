@@ -56,3 +56,7 @@ export default class Footer {
         }
     }
 }
+const footer = (data, options) => {
+    return new Footer(data, options);
+};
+export {footer};
