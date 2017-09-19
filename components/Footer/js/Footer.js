@@ -4,7 +4,6 @@ import langPackage from '../js/lang'
 export default class Footer {
     constructor(data) {
         this.lang = data.lang || 'en';
-        this.data = data;
         this.from = data.from || '';
         this.options = data.option;
         this.lang_toCase = this.lang.toLocaleUpperCase();
