@@ -6,10 +6,11 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    entry: './components/Footer/js/Footer.js',
+    entry: './components/runtime.js',
     output: {
         path: './dist',
-        filename: 'scripts/Footer.min.js',
+        filename: 'scripts/runtime.min.js',
+        libraryTarget: 'umd'
     },
     module: {
         loaders: [

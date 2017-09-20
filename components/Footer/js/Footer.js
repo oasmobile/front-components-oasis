@@ -56,7 +56,5 @@ export default class Footer {
         }
     }
 }
-const footer = (data, options) => {
-    return new Footer(data, options);
-};
-export {footer};
+// const Footer = (data) => new Footer(id, time, amount);
+// export {marqueeTab};
