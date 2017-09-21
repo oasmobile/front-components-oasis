@@ -44,17 +44,15 @@ export default class Footer {
 
     }
     zhHtml() {
-        if (this.options == 'ok') {
+        if (this.options === 'ok') {
             this.rootElementID.className = 'footer_box clearfix';
         } else {
             this.rootElementID.className = '';
         }
-        if (this.lang == 'zh') {
+        if (this.lang === 'zh') {
             this.fLogo = 'https://img.oasgames.com/upload/1505731532.png';
             this.footWidth = '685px';
             this.logoMarginT = '7px';
         }
     }
 }
-// const Footer = (data) => new Footer(id, time, amount);
-// export {marqueeTab};

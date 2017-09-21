@@ -6,11 +6,10 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    entry: './components/runtime.js',
+    entry: './index.js',
     output: {
         path: './dist',
-        filename: 'scripts/runtime.min.js',
-        libraryTarget: 'umd'
+        filename: 'scripts/runtime.min.js'
     },
     module: {
         loaders: [
@@ -24,6 +23,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("css/[name].min.css"),
+        new ExtractTextPlugin("css/runtime.min.css"),
     ],
 };

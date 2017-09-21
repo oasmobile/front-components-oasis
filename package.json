@@ -1,11 +1,10 @@
 {
     "name"           : "front-components-oasis",
-    "version"        : "1.0.24",
+    "version"        : "1.0.26",
     "description"    : "Oasis前台组件库",
-    "main"           : "./dist/scripts/runtime.min.js",
+    "main"           : "index.js",
     "scripts"        : {
-        "dev"  : "cd test && webpack -d --progress --colors --watch",
-        "build": "cd test && webpack -p --progress --colors"
+        "build": "webpack -p --progress --colors"
     },
     "repository"     : {
         "type": "git",
