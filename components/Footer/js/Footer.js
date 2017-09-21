@@ -3,9 +3,10 @@ import langPackage from '../js/lang'
 
 export default class Footer {
     constructor(data) {
-        this.lang = data.lang || 'zh';
+        this.lang = data.lang || 'en';
         this.from = data.from || '';
-        this.options = data.option;
+        this.year = data.year;
+        this.options = data.option || '';
         this.langToCase = this.lang.toLocaleUpperCase();
         this.abusHref = data.abusHref || `//oasgames.com/en/`;
         this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
@@ -14,12 +15,14 @@ export default class Footer {
         this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
         this.footWidth = '609px';
         this.logoMarginT = '0';
+        this.forumBok = data.forumBok;
     }
     _renderHtml() {
         this.langContent = langPackage[this.lang];
+        this.forum();
         this.content = `<div id="foot" class="clearfix" style="width:${this.footWidth};">
                             <div class="f-logo fl">
-                                <a href="//oasgames.com" rel="nofollow" target="_blank">
+                                <a href="//oasgames.com/en" rel="nofollow" target="_blank">
                                     <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
                                 </a>
                             </div>
@@ -28,9 +31,9 @@ export default class Footer {
                                 <a target="_blank" href="${this.abusHref}" rel="nofollow">${this.langContent.footer_abus}</a>
                                 丨<a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
                                 丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>
-                                <span>丨<a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>
+                                ${this.forumContent}
                             </div>
-                                <p>©2012-2017 ${this.langContent.footer_his}</p>
+                                <p>©2012-${this.year} ${this.langContent.footer_his}</p>
                                 <p>${this.langContent.footer_notice}</p>
                             </div>
                         </div>`;
@@ -53,6 +56,13 @@ export default class Footer {
             this.fLogo = 'https://img.oasgames.com/upload/1505731532.png';
             this.footWidth = '685px';
             this.logoMarginT = '7px';
+        }
+    }
+    forum(){
+        if (this.forumBok) {
+            this.forumContent = '';
+        }else{
+            this.forumContent = `<span>丨<a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>`;
         }
     }
 }

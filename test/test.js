@@ -1,4 +1,2 @@
-import {footers} from '../dist/scripts/runtime.min';
-// import {footers} from '../components/runtime';
-console.log(footers)
-footers({'option':''}).fire('footwrap');
+import {FcoFooter} from '../index';
+FcoFooter({'year':2017,'forumBok': true}).fire('footwrap');
