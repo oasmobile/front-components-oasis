@@ -10,7 +10,7 @@ a{  blr: expression(this.onFocus=this.blur());  outline: none;  text-decoration:
 area {  blr: expression(this.onFocus=this.blur());  outline: none;  }
 body {  background: transparent;  }
 /*footer*/
-#footwrap {  font-family: Arial, Helvetica, sans-serif; width: 100%;  margin:0 auto; }
+#footwrap {  font-family: Arial, Helvetica, sans-serif; width: 100%; background: #000;  margin:0 auto; }
 #foot {  font-size: 13px;  height: 87px;  line-height: 16px;  margin: 0 auto;  width: 608px;  padding-top: 13px;  overflow: hidden;  }
 .bottext {  display: inline;  font-size: 13px;  height: 55px;  line-height: 20px;  margin-top: 6px;  width: 469px;  padding-left: 35px;  }
 .bottext a:link, .bottext a:visited {  font-size: 13px;  }
