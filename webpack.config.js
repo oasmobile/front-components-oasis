@@ -9,7 +9,8 @@ module.exports = {
     entry: './index.js',
     output: {
         path: './dist',
-        filename: 'scripts/runtime.min.js'
+        filename: 'scripts/runtime.min.js',
+        libraryTarget: 'umd'
     },
     module: {
         loaders: [

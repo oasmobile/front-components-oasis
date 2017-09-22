@@ -1,6 +1,6 @@
 {
     "name"           : "front-components-oasis",
-    "version"        : "1.0.28",
+    "version"        : "1.0.30",
     "description"    : "Oasis前台组件库",
     "main"           : "index.js",
     "scripts"        : {
@@ -11,7 +11,7 @@
         "type": "git",
         "url" : "git+https://github.com/oasmobile/front-components-oasis.git"
     },
-    "author"         : "",
+    "author"         : "Michael,Armand",
     "license"        : "ISC",
     "bugs"           : {
         "url": "https://github.com/oasmobile/front-components-oasis/issues"
