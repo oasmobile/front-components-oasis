@@ -1,6 +1,6 @@
 {
     "name"           : "front-components-oasis",
-    "version"        : "1.0.30",
+    "version"        : "1.0.34",
     "description"    : "Oasis前台组件库",
     "main"           : "index.js",
     "scripts"        : {

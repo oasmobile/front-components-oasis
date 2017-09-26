@@ -8,7 +8,7 @@ export default class Footer {
         this.year = data.year;
         this.options = data.option || '';
         this.langToCase = this.lang.toLocaleUpperCase();
-        this.abusHref = data.abusHref || `//oasgames.com/en/`;
+        this.oasgame = 'oasgames.com/en';
         this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.termSerHref = data.termSerHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
@@ -20,15 +20,15 @@ export default class Footer {
     _renderHtml() {
         this.langContent = langPackage[this.lang];
         this.forum();
-        this.content = `<div id="foot" class="clearfix" style="width:${this.footWidth};">
+        this.content = `<div id="foot" class="clearfix-footer" style="width:${this.footWidth};">
                             <div class="f-logo fl">
-                                <a href="//oasgames.com/en" rel="nofollow" target="_blank">
+                                <a href="//${this.oasgame}" rel="nofollow" target="_blank">
                                     <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
                                 </a>
                             </div>
                             <div class="bottext fl">
                             <div>
-                                <a target="_blank" href="${this.abusHref}" rel="nofollow">${this.langContent.footer_abus}</a>
+                                <a target="_blank" href="http://${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a>
                                 丨<a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
                                 丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>
                                 ${this.forumContent}
@@ -48,7 +48,7 @@ export default class Footer {
     }
     zhHtml() {
         if (this.options === 'ok') {
-            this.rootElementID.className = 'footer_box clearfix';
+            this.rootElementID.className = 'footer_box clearfix-footer';
         } else {
             this.rootElementID.className = '';
         }
@@ -56,6 +56,7 @@ export default class Footer {
             this.fLogo = 'https://img.oasgames.com/upload/1505731532.png';
             this.footWidth = '685px';
             this.logoMarginT = '7px';
+            this.oasgame = 'oasgames.com/zh';
         }
     }
     forum(){

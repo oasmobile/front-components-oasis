@@ -110,6 +110,14 @@ const langPackage = {
         footer_forum: 'المنتدى',
         footer_his: 'OASIS GAMES LIMITED. جميع الحقوق محفوظة',
         footer_notice: 'المنتدى / شروط الخدمة / شروط الخصوصية / من نحن'
+    },
+    'es': {
+        footer_abus: 'Sobre Nosotros',
+        footer_pri: 'Política de Privacidad',
+        footer_term_ser: 'Términos de Servicio',
+        footer_forum: 'Foro',
+        footer_his: 'OASIS GAMES LIMITED. Todos los derechos reservados.',
+        footer_notice: 'La marcas registradas referenciadas son propiedad de sus respectivos dueños.'
     }
 };
 
