@@ -1,7 +1,7 @@
 {
     "name"           : "front-components-oasis",
-    "version"        : "1.0.34",
-    "description"    : "Oasis前台组件库",
+    "version"        : "1.0.43",
+    "description"    : "Oasis公共插件",
     "main"           : "index.js",
     "scripts"        : {
         "dev"  : "webpack -d --progress --colors --watch",
