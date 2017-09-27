@@ -8,10 +8,11 @@ export default class Footer {
         this.year = data.year;
         this.options = data.option || '';
         this.langToCase = this.lang.toLocaleUpperCase();
+        this.logoOasgame = `${this.lang}.oasgames.com`;
         this.oasgame = 'oasgames.com/en';
         this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.termSerHref = data.termSerHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
-        this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
+        this.forumHref = data.forumHref || `https://${this.langToCase}.forum.oasgames.com`;
         this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
         this.footWidth = '609px';
         this.logoMarginT = '0';
@@ -22,7 +23,7 @@ export default class Footer {
         this.forum();
         this.content = `<div id="foot" class="clearfix-footer" style="width:${this.footWidth};">
                             <div class="f-logo fl">
-                                <a href="//${this.oasgame}" rel="nofollow" target="_blank">
+                                <a href="http://${this.logoOasgame}" rel="nofollow" target="_blank">
                                     <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
                                 </a>
                             </div>
