@@ -1,6 +1,6 @@
 {
     "name"           : "front-components-oasis",
-    "version"        : "1.0.44",
+    "version"        : "1.0.449",
     "description"    : "Oasis公共插件",
     "main"           : "index.js",
     "scripts"        : {

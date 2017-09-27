@@ -8,7 +8,8 @@ export default class Footer {
         this.year = data.year;
         this.options = data.option || '';
         this.langToCase = this.lang.toLocaleUpperCase();
-        this.logoOasgame = `${this.lang}.oasgames.com`;
+        this.logoOasgame = data.logoOasgame ||`http://${this.lang}.oasgames.com`;
+        this.blank = '';
         this.oasgame = 'oasgames.com/en';
         this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.termSerHref = data.termSerHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
@@ -17,13 +18,14 @@ export default class Footer {
         this.footWidth = '609px';
         this.logoMarginT = '0';
         this.forumBok = data.forumBok;
+        this._blank();
     }
     _renderHtml() {
         this.langContent = langPackage[this.lang];
         this.forum();
         this.content = `<div id="foot" class="clearfix-footer" style="width:${this.footWidth};">
                             <div class="f-logo fl">
-                                <a href="http://${this.logoOasgame}" rel="nofollow" target="_blank">
+                                <a href="${this.logoOasgame}" ${this.blank}>
                                     <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
                                 </a>
                             </div>
@@ -65,6 +67,11 @@ export default class Footer {
             this.forumContent = '';
         }else{
             this.forumContent = `<span>丨<a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>`;
+        }
+    }
+    _blank(){
+        if(this.logoOasgame === `http://${this.lang}.oasgames.com`){
+            this.blank = `target= "_blank"`;
         }
     }
 }
