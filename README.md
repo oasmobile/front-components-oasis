@@ -18,5 +18,5 @@
         （5）termSerHref是Terms of Service（服务条款）的跳转地址配置。  
 
 如果没有webpack编译环境直接引入  
-css地址：https://img.oasgames.com/upload/1506419265/dist/css/runtime.min.css  
-js地址：https://img.oasgames.com/upload/1506419265/dist/scripts/runtime.min.js 
+css地址：https://img.oasgames.com/upload/1506681304/dist/css/runtime.min.css  
+js地址：https://img.oasgames.com/upload/1506681304/dist/scripts/runtime.min.js 
