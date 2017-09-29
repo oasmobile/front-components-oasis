@@ -60,6 +60,8 @@ export default class Footer {
             this.footWidth = '685px';
             this.logoMarginT = '7px';
             this.oasgame = 'oasgames.com/zh';
+            this.priHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';
+            this.termSerHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';
         }
     }
     forum(){
