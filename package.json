@@ -1,10 +1,11 @@
 {
     "name"           : "front-components-oasis",
-    "version"        : "1.0.0",
+    "version"        : "1.1.0",
     "description"    : "Oasis公共插件",
     "main"           : "index.js",
     "scripts"        : {
         "dev"  : "webpack -d --progress --colors --watch",
+        "test" : "cd test && webpack -d --progress --colors --watch",
         "build": "webpack -p --progress --colors"
     },
     "repository"     : {
@@ -23,7 +24,6 @@
         "babel-loader"               : "^6.2.4",
         "babel-preset-es2015"        : "^6.9.0",
         "css-loader"                 : "^0.23.1",
-        "extract-text-webpack-plugin": "^1.0.1",
         "style-loader"               : "^0.13.1",
         "webpack"                    : "^1.13.3"
     }

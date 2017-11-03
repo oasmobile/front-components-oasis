@@ -5,7 +5,8 @@ export default class Footer {
     constructor(data) {
         this.lang = data.lang || 'en';
         this.from = data.from || '';
-        this.year = data.year;
+        this.date = new Date;
+        this.year = this.date.getFullYear();
         this.options = data.option || '';
         this.langToCase = this.lang.toLocaleUpperCase();
         this.logoOasgame = data.logoOasgame ||`http://${this.lang}.oasgames.com`;
@@ -18,26 +19,34 @@ export default class Footer {
         this.footWidth = '609px';
         this.logoMarginT = '0';
         this.forumBok = data.forumBok;
+        this.gameSlot = data.gameSlot;
+        this.gameSlotContent = '';
+
+
         this._blank();
     }
     _renderHtml() {
         this.langContent = langPackage[this.lang];
         this.forum();
-        this.content = `<div id="foot" class="clearfix-footer" style="width:${this.footWidth};">
-                            <div class="f-logo fl">
-                                <a href="${this.logoOasgame}" ${this.blank}>
-                                    <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
-                                </a>
-                            </div>
-                            <div class="bottext fl">
-                            <div>
-                                <a target="_blank" href="http://${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a>
-                                丨<a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
-                                丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>
-                                ${this.forumContent}
-                            </div>
-                                <p>©2012-${this.year} ${this.langContent.footer_his}</p>
-                                <p>${this.langContent.footer_notice}</p>
+        this.gameSlotFn();
+        this.content = `<div id="footBox" class="clearfix-footer ${this.footBox}" style="width:${this.footBoxWidth};">
+                            ${this.gameSlotContent}
+                            <div id="foot" class="clearfix-footer ${this.footClas}" style="width:${this.footWidth};">
+                                <div class="f-logo fl">
+                                    <a href="${this.logoOasgame}" ${this.blank}>
+                                        <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
+                                    </a>
+                                </div>
+                                <div class="bottext fl">
+                                <div>
+                                    <a target="_blank" href="http://${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a>
+                                    丨<a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
+                                    丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>
+                                    ${this.forumContent}
+                                </div>
+                                    <p>©2012-${this.year} ${this.langContent.footer_his}</p>
+                                    <p>${this.langContent.footer_notice}</p>
+                                </div>
                             </div>
                         </div>`;
         return this.content;
@@ -75,5 +84,12 @@ export default class Footer {
         if(this.logoOasgame === `http://${this.lang}.oasgames.com`){
             this.blank = `target= "_blank"`;
         }
+    }
+    gameSlotFn(){
+
+        this.footBox = this.gameSlot ? this.footBox = "footBox" : this.footBox = "";
+        this.footClas = this.gameSlot  ? this.footClas = "" : this.footClas = "marginAuto";
+        this.footBoxWidth = this.lang=='zh' ? this.footBoxWidth = "1190px" : this.footBoxWidth = "1110px";
+        this.gameSlotContent = this.gameSlot ? this.gameSlotContent = `<div class="games_company">${this.gameSlot}</div>` : this.gameSlotContent = '';
     }
 }
