@@ -13,7 +13,7 @@ export default class Footer {
         this.blank = '';
         this.oasgame = 'oasgames.com/en';
         this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
-        this.termSerHref = data.termSerHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
+        this.termSerHref = data.termSerHref || `https://www.oasgames.com/TermsofService(${this.langToCase}).html`;
         this.forumHref = data.forumHref || `https://${this.langToCase}.forum.oasgames.com`;
         this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
         this.footWidth = '609px';
@@ -70,7 +70,7 @@ export default class Footer {
             this.logoMarginT = '7px';
             this.oasgame = 'oasgames.com/zh';
             this.priHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';
-            this.termSerHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';
+            this.termSerHref = 'https://www.oasgames.com/TermsofService(EN).html';
         }
     }
     forum(){
