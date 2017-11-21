@@ -22,9 +22,8 @@ FcoFooter({
         （2）forumBok是forum（论坛）的开关 值为true则是关闭论坛入口。  
         （3）forumHref是forum（论坛）跳转地址配置。  
         （4）priHref是Privacy Policy（隐私权申明）的跳转地址配置。  
-        （5）termSerHref是Terms of Service（服务条款）的跳转地址配置。 
+        （5）termSerHref是Terms of Service（服务条款）的跳转地址配置。   
         （6）gameSlot是游戏版权的插槽
 
 如果没有webpack编译环境直接引入  
-css地址：https://img.oasgames.com/upload/1506681304/dist/css/runtime.min.css  
-js地址：https://img.oasgames.com/upload/1506681304/dist/scripts/runtime.min.js 
+js地址：https://img.oasgames.com/upload/1511167850/dist/scripts/runtime.min.js 
