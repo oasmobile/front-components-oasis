@@ -23,7 +23,7 @@ FcoFooter({
         （3）forumHref是forum（论坛）跳转地址配置。  
         （4）priHref是Privacy Policy（隐私权申明）的跳转地址配置。  
         （5）termSerHref是Terms of Service（服务条款）的跳转地址配置。   
-        （6）gameSlot是游戏版权的插槽
+        （6）gameSlot是游戏版权的插槽  
         （7）backgroundColor背景色
 
 如果没有webpack编译环境直接引入  
