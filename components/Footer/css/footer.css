@@ -1,147 +1,25 @@
 @charset "utf-8";
-.clearfix-footer:after {
-    content: " ";
-    display: block;
-    clear: both;
-    height: 0;
-}
-
-.clearfix-footer {
-    zoom: 1;
-    display: table;
-}
-
-.fl {
-    float: left;
-}
-
-.fr {
-    float: right;
-}
-
-a:link, a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a {
-    cursor: pointer;
-    background-color: transparent;
-}
-
-a {
-    blr: expression(this.onFocus=this.blur());
-    outline: none;
-    text-decoration: none;
-}
-
-area {
-    blr: expression(this.onFocus=this.blur());
-    outline: none;
-}
-
-body {
-    background: transparent;
-}
-
+.fco-footer-clearfix:after {  content: " ";  display: block;  clear: both;  height: 0;  }
+.fco-footer-clearfix {  zoom: 1;  display: table;  }
+.fco-footer-fl {  float: left;  }
+.fco-footer-fr {  float: right;  }
 /*footer*/
-#footwrap {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    margin: 0 auto;
-}
-
-#footBox {
-    margin: 0 auto;
-    height: auto;
-}
-
-#foot {
-    font-size: 13px;
-    height: 87px;
-    line-height: 16px;
-    width: 608px;
-    padding-top: 13px;
-    overflow: hidden;
-}
-
-.bottext {
-    display: inline;
-    font-size: 13px;
-    height: 55px;
-    line-height: 20px;
-    margin-top: 6px;
-    width: 469px;
-    padding-left: 20px;
-}
-
-.bottext a:link, .bottext a:visited {
-    font-size: 13px;
-}
-
-.f-logo {
-    text-align: center;
-    margin-left: 10px;
-}
-
-.f-logo .mar-t {
-    margin-top: 5px;
-}
-
-#foot {
-    color: #979797;
-}
-
-.bottext a:link, .bottext a:visited {
-    color: #979797;
-}
-
-.footer_box #foot {
-    float: left;
-}
-
-.footBox #foot {
-    float: right;
-}
-
-.footBox .games_company {
-    float: left;
-}
-
-.marginAuto {
-    margin: 0 auto;
-}
-
-.games_company {
-    width: 500px;
-    height: 67px;
-    font-size: 12px;
-    margin-top: 16px;
-}
-
-.games_company .logo_a {
-    float: left;
-}
-
-.games_company .logo {
-    width: 75px;
-    height: 64px;
-    background-position: -554px 0;
-}
-
-.games_company ul {
-    padding: 0;
-    margin: 10px 0 0 20px;
-    list-style: none;
-    float: left;
-}
-
-.games_company ul li {
-    line-height: 22px;
-    color: #979797;
-}
+#fco-footer-footwrap {  font-family: Arial, Helvetica, sans-serif;  width: 100%;  margin: 0 auto;  }
+#fco-footer-footBox {  margin: 0 auto;  height: auto;  }
+#fco-footer-foot {  font-size: 13px;  height: 87px;  line-height: 16px;  width: 608px;  padding-top: 13px;  overflow: hidden;  color: #979797;  }
+.fco-footer-bottext {  display: inline;  font-size: 13px;  height: 55px;  line-height: 20px;  margin-top: 6px;  width: 469px;  padding-left: 20px;  }
+.fco-footer-bottext a:link, .fco-footer-bottext a:visited {  font-size: 13px;  text-decoration: none;  color: #979797;  }
+#fco-footer-footwrap a:hover {  text-decoration: underline;  }
+#fco-footer-footwrap a {  cursor: pointer;  background-color: transparent;  }
+.fco-footer-logo {  text-align: center;  margin-left: 10px;  }
+.fco-footer-footer_box #fco-footer-foot {  float: left;  }
+.fco-footer-footBox #fco-footer-foot {  float: right;  }
+.fco-footer-footBox .games_company {  float: left;  }
+.fco-footer-marginAuto {  margin: 0 auto;  }
+.fco-footer-games_company {  width: 500px;  height: 67px;  font-size: 12px;  margin-top: 16px;  }
+.fco-footer-games_company .logo_a {  float: left;  }
+.fco-footer-games_company .logo {  width: 75px;  height: 64px;  background-position: -554px 0;  }
+.fco-footer-games_company ul {  padding: 0;  margin: 10px 0 0 20px;  list-style: none;  float: left;  }
+.fco-footer-games_company ul li {  line-height: 22px;  color: #979797;  }
 
 

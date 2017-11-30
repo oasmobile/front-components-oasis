@@ -1,4 +1,4 @@
 import {FcoFooter} from '../index';
 FcoFooter({
-    lang:'en',
+    lang:'是的弗格森的风格tw',
 }).fire('footer');
