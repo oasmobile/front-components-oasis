@@ -4,6 +4,12 @@ import langPackage from '../js/lang'
 export default class Footer {
     constructor(data) {
         this.lang = data.lang || 'en';
+        this.langContent = langPackage[this.lang];
+        if(this.langContent === undefined)
+        {
+            this.lang = 'en';
+            this.langContent = langPackage[this.lang];
+        }
         this.from = data.from || '';
         this.date = new Date;
         this.year = this.date.getFullYear();
@@ -17,29 +23,23 @@ export default class Footer {
         this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
         this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
         this.footWidth = '609px';
+        this.footMinWidth = '609px';
         this.logoMarginT = '0';
         this.forumBok = data.forumBok;
-        this.gameSlot = data.gameSlot;
-        this.gameSlotContent = '';
         this.backgroundColor = data.backgroundColor || '#000';
-
         this._blank();
     }
-
     _renderHtml() {
-        this.langContent = langPackage[this.lang];
         this.forum();
-        this.gameSlotFn();
-        this.content = `<div id="footwrap" style="background-color: ${this.backgroundColor}">
-                            <div id="footBox" class="clearfix-footer ${this.footBox}" style="width:${this.footBoxWidth};">
-                            ${this.gameSlotContent}
-                                <div id="foot" class="clearfix-footer ${this.footClas}" style="width:${this.footWidth};">
-                                    <div class="f-logo fl">
+        this.content = `<div id="fco-footer-footwrap" style="background-color: ${this.backgroundColor};min-width:${this.footMinWidth}">
+                            <div id="fco-footer-footBox" class="fco-footer-clearfix">
+                                <div id="fco-footer-foot" class="fco-footer-clearfix" style="width:${this.footWidth};">
+                                    <div class="fco-footer-logo fco-footer-fl">
                                         <a href="${this.logoOasgame}" ${this.blank}>
                                             <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
                                         </a>
                                     </div>
-                                    <div class="bottext fl">
+                                    <div class="fco-footer-bottext fco-footer-fl">
                                         <div>
                                             <a target="_blank" href="http://${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a>
                                             丨<a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
@@ -54,31 +54,22 @@ export default class Footer {
                         </div>`;
         return this.content;
     }
-
     fire(id) {
         let rootElement = document.getElementById(id);
-        this.rootElementID = rootElement;
         this.zhHtml();
         rootElement.innerHTML = this._renderHtml();
-
     }
-
     zhHtml() {
-        if (this.options === 'ok') {
-            this.rootElementID.className = 'footer_box clearfix-footer';
-        } else {
-            this.rootElementID.className = '';
-        }
         if (this.lang === 'zh') {
             this.fLogo = 'https://img.oasgames.com/upload/1505731532.png';
             this.footWidth = '685px';
+            this.footMinWidth = '685px';
             this.logoMarginT = '7px';
             this.oasgame = 'oasgames.com/zh';
             this.priHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';
             this.termSerHref = 'https://www.oasgames.com/TermsofService(EN).html';
         }
     }
-
     forum() {
         if (this.forumBok) {
             this.forumContent = '';
@@ -86,18 +77,9 @@ export default class Footer {
             this.forumContent = `<span>丨<a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>`;
         }
     }
-
     _blank() {
         if (this.logoOasgame === `http://${this.lang}.oasgames.com`) {
             this.blank = `target= "_blank"`;
         }
-    }
-
-    gameSlotFn() {
-
-        this.footBox = this.gameSlot ? this.footBox = "footBox" : this.footBox = "";
-        this.footClas = this.gameSlot ? this.footClas = "" : this.footClas = "marginAuto";
-        this.footBoxWidth = this.lang === 'zh' ? this.footBoxWidth = "1190px" : this.footBoxWidth = "1110px";
-        this.gameSlotContent = this.gameSlot ? this.gameSlotContent = `<div class="games_company">${this.gameSlot}</div>` : this.gameSlotContent = '';
     }
 }
