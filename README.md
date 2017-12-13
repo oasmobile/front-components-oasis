@@ -7,15 +7,10 @@
 2.想调用的页面引入  例： import {FcoFooter} from 'front-components-oasis';  
 3.方法调用 例：  
 FcoFooter({   
-        lang: 'zh',  
-        forumBok:true,    
-        gameSlot: `<img src="https://img.oasgames.com/upload/1460357149.gif" class="logo_a">
-                 <ul>
-                     <li>©2002 MASASHI KISHIMOTO / 2007 SHIPPUDEN All Rights Reserved.</li>
-                     <li>©BANDAI NAMCO Entertainment Inc.</li>
-                 </ul>`  
- }).fire('footer'); \/\/后面详细介绍参数  
-4.对应html页面创建标签 例如（\<div id="footer"\>\</div\>）.  
+&nbsp;&nbsp;&nbsp;&nbsp;lang: 'zh',  
+&nbsp;&nbsp;&nbsp;&nbsp;forumBok:true   
+}).fire('footer'); \/\/后面详细介绍参数  
+4.对应html页面创建标签 例如（\<div id="footer"\>\</div\>)  
 方法调用参数说明：    
 1.选填参数：  
         （1）lang默认语言是en  
