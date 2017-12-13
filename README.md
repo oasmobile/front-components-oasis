@@ -18,13 +18,12 @@ FcoFooter({
 4.对应html页面创建标签 例如（\<div id="footer"\>\</div\>）.  
 方法调用参数说明：    
 1.选填参数：  
-        （1）lang默认语言是en 。  
-        （2）forumBok是forum（论坛）的开关 值为true则是关闭论坛入口。  
-        （3）forumHref是forum（论坛）跳转地址配置。  
-        （4）priHref是Privacy Policy（隐私权申明）的跳转地址配置。  
-        （5）termSerHref是Terms of Service（服务条款）的跳转地址配置。   
-        （6）gameSlot是游戏版权的插槽  
-        （7）backgroundColor背景色
+        （1）lang默认语言是en  
+        （2）forumBok是forum（论坛）的开关 值为true则是关闭论坛入口  
+        （3）forumHref是forum（论坛）跳转地址配置  
+        （4）priHref是Privacy Policy（隐私权申明）的跳转地址配置  
+        （5）termSerHref是Terms of Service（服务条款）的跳转地址配置  
+        （6）backgroundColor背景色  
 
 如果没有webpack编译环境直接引入  
 js地址：https://img.oasgames.com/upload/1511850439/dist/scripts/runtime.min.js
