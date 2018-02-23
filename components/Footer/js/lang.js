@@ -16,7 +16,7 @@ const langPackage = {
         footer_notice:'All trademarks referenced herein are the properties of their respective owners.'
     },
     'tw': {
-        footer_abus:'聯繫我們',
+        footer_abus:'關於我們',
         footer_pri:'隱私權聲明',
         footer_term_ser:'服務條款',
         footer_forum:'論壇',

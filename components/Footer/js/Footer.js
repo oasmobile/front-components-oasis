@@ -69,6 +69,10 @@ export default class Footer {
             this.priHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';
             this.termSerHref = 'https://www.oasgames.com/TermsofService(EN).html';
         }
+        else if (this.lang === 'tw')
+        {
+            this.oasgame = 'oasgames.com/zh';
+        }
     }
     forum() {
         if (this.forumBok) {
