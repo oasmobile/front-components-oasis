@@ -1,4 +1,5 @@
 import {FcoFooter} from '../index';
 FcoFooter({
-    lang:'en',
+    lang:'tw',
+    forumBok : true
 }).fire('footer');
