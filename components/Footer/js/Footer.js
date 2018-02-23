@@ -27,7 +27,6 @@ export default class Footer {
         this.logoMarginT = '0';
         this.forumBok = data.forumBok;
         this.backgroundColor = data.backgroundColor || '#000';
-        this._blank();
     }
     _renderHtml() {
         this.forum();
@@ -35,7 +34,7 @@ export default class Footer {
                             <div id="fco-footer-footBox" class="fco-footer-clearfix">
                                 <div id="fco-footer-foot" class="fco-footer-clearfix" style="width:${this.footWidth};">
                                     <div class="fco-footer-logo fco-footer-fl">
-                                        <a href="${this.logoOasgame}" ${this.blank}>
+                                        <a href="${this.logoOasgame}" target="_blank">
                                             <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
                                         </a>
                                     </div>
@@ -79,11 +78,6 @@ export default class Footer {
             this.forumContent = '';
         } else {
             this.forumContent = `<span>丨<a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>`;
-        }
-    }
-    _blank() {
-        if (this.logoOasgame === `http://${this.lang}.oasgames.com`) {
-            this.blank = `target= "_blank"`;
         }
     }
 }

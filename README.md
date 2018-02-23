@@ -21,4 +21,4 @@ FcoFooter({
         （6）backgroundColor背景色  
 
 如果没有webpack编译环境直接引入  
-js地址：https://img.oasgames.com/upload/1511850439/dist/scripts/runtime.min.js
+js地址：https://img.oasgames.com/upload/1519379539/dist/scripts/runtime.min.js
