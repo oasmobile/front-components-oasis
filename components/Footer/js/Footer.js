@@ -34,7 +34,7 @@ export default class Footer {
                             <div id="fco-footer-footBox" class="fco-footer-clearfix">
                                 <div id="fco-footer-foot" class="fco-footer-clearfix" style="width:${this.footWidth};">
                                     <div class="fco-footer-logo fco-footer-fl">
-                                        <a href="${this.logoOasgame}" target="_blank">
+                                        <a href="${this.logoOasgame}" target="_blank" hidefocus=”true”>
                                             <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
                                         </a>
                                     </div>
