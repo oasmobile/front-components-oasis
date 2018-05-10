@@ -118,6 +118,33 @@ const langPackage = {
         footer_forum: 'Foro',
         footer_his: 'OASIS GAMES LIMITED. Todos los derechos reservados.',
         footer_notice: 'La marcas registradas referenciadas son propiedad de sus respectivos dueños.'
+    },
+    //日语
+    'ja': {
+        footer_abus : 'お問い合わせ',
+        footer_pri : 'プライバシーポリシー',
+        footer_term_ser : 'サービス利用規約',
+        footer_forum : 'フォーラム',
+        footer_his : 'OASIS GAMES LIMITED.に著作権を所有する.',
+        footer_notice :'著作者および発行者の許可なく転載・複製することを禁じます.'
+    },
+    //泰语
+    'th': {
+        footer_abus : 'เกี่ยวกับพวกเรา',
+        footer_pri : 'นโยบายความเป็นส่วนตัว',
+        footer_term_ser : 'เงื่อนไขการบริการ',
+        footer_forum : 'ฟอรั่ม',
+        footer_his : 'OASIS GAMES LIMITED. All rights reserved.',
+        footer_notice : 'เครื่องหมายการค้าทั้งหมด เป็นทรัพย์สินของเจ้าของที่เกี่ยวข้องแต่เพียงผู้เดียว'
+    },
+    //越南语
+    'vi':{
+        footer_abus: 'Về chúng tôi',
+        footer_pri: 'Chính sách quyền riêng tư ',
+        footer_term_ser: 'Điều khoản phục vụ ',
+        footer_forum: 'Diễn đàn',
+        footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
+        footer_notice: 'Tất cả nhãn hiệu được nhắc đến tại đây thuộc sở hữu của nhiều đối tượng'
     }
 };
 

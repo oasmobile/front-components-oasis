@@ -16,16 +16,15 @@ export default class Footer {
         this.options = data.options || '';
         this.langToCase = this.lang.toLocaleUpperCase();
         this.logoOasgame = data.logoOasgame || `http://${this.lang}.oasgames.com`;
-        this.blank = '';
         this.oasgame = 'oasgames.com/en';
-        this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
+        this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.IsLo()}).html`;
         this.termSerHref = data.termSerHref || `https://www.oasgames.com/TermsofService(${this.langToCase}).html`;
         this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
         this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
         this.footWidth = '609px';
         this.footMinWidth = '609px';
         this.logoMarginT = '0';
-        this.forumBok = data.forumBok;
+        this.forumBok = data.forumBok || false;
         this.backgroundColor = data.backgroundColor || '#000';
     }
     _renderHtml() {
@@ -35,7 +34,7 @@ export default class Footer {
                                 <div id="fco-footer-foot" class="fco-footer-clearfix" style="width:${this.footWidth};">
                                     <div class="fco-footer-logo fco-footer-fl">
                                         <a href="${this.logoOasgame}" target="_blank">
-                                            <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT};">
+                                            <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT}; border:none;">
                                         </a>
                                     </div>
                                     <div class="fco-footer-bottext fco-footer-fl">
@@ -75,9 +74,20 @@ export default class Footer {
     }
     forum() {
         if (this.forumBok) {
-            this.forumContent = '';
-        } else {
             this.forumContent = `<span>丨<a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>`;
+        } else {
+            this.forumContent = '';
         }
+    }
+    IsLo() {
+        this.LO = ['PL', 'PT', 'RU', 'TR'];
+        this.langCase = '';
+        for(let i=0; i<this.LO.length; i++){
+            console.log(this.LO[i])
+            if(this.langToCase === this.LO[i]){
+                this.langCase = 'LO-'+this.langToCase;
+            }
+        }
+        return this.langCase;
     }
 }
