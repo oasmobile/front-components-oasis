@@ -2,7 +2,8 @@ import '../css/GDPR.css';
 import axios from '../common/axios';
 import browser from '../common/browser';
 import langPackage from '../js/lang';
-export default class GDPR{
+
+export default class GDPR {
     constructor(data) {
         this.lang = data.lang || 'en';
         this.langPackage = langPackage[this.lang];
@@ -11,6 +12,7 @@ export default class GDPR{
         this.loginKey = '';
         this.policy_acceptance = '';
     }
+
     _renderHtml() {
         this.PC = `<div class="fco-gdpr-box">
                         <p class="fco-gdpr-text">
@@ -24,9 +26,8 @@ export default class GDPR{
                             <a href="javascript:;" class="fco-gdpr-wap-btn gdpr-btn">知道了H5</a>
                         </p>
                     </div>`;
-        axios.jsonp('https://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
-            console.log(data)
-            if(data.status === 'ok' && data.val.policy_acceptance ===false){
+        axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
+            if (data.status === 'ok' && data.val.policy_acceptance === false) {
                 this.loginKey = data.val.loginKey;
                 this.policy_acceptance = data.val.policy_acceptance;
             }
@@ -46,25 +47,25 @@ export default class GDPR{
             }
         }.bind(this));
     }
-    GDPRBox(content){
+
+    GDPRBox(content) {
         let Body = document.body,
             gdpr = document.createElement('div');
-        gdpr.setAttribute('id','fco-gdpr');
+        gdpr.setAttribute('id', 'fco-gdpr');
         gdpr.innerHTML = content;
         Body.appendChild(gdpr);
     }
+
     ClickFn() {
         let oBtn = document.querySelector('.gdpr-btn'),
             gapr = document.querySelector('#fco-gdpr');
         oBtn.onclick = function () {
-            axios.post('https://passport.oasgames.com/profile/policy-accept',{
-                passport_jwt:this.loginKey
+            axios.post('http://passport.oasgames.com/profile/policy-accept', {
+                passport_jwt: this.loginKey
             }).then(function (data) {
                 gapr.style.display = 'none';
                 this.policy_acceptance = true;
             });
-
         }
     }
-
 }

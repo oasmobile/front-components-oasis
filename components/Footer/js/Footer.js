@@ -5,8 +5,7 @@ export default class Footer {
     constructor(data) {
         this.lang = data.lang || 'en';
         this.langContent = langPackage[this.lang];
-        if(this.langContent === undefined)
-        {
+        if (this.langContent === undefined) {
             this.lang = 'en';
             this.langContent = langPackage[this.lang];
         }
@@ -27,6 +26,7 @@ export default class Footer {
         this.forumBok = data.forumBok || false;
         this.backgroundColor = data.backgroundColor || '#000';
     }
+
     _renderHtml() {
         this.forum();
         this.content = `<div id="fco-footer-footwrap" style="background-color: ${this.backgroundColor};min-width:${this.footMinWidth}">
@@ -52,11 +52,13 @@ export default class Footer {
                         </div>`;
         return this.content;
     }
+
     fire(id) {
         let rootElement = document.getElementById(id);
         this.zhHtml();
         rootElement.innerHTML = this._renderHtml();
     }
+
     zhHtml() {
         if (this.lang === 'zh') {
             this.fLogo = 'https://img.oasgames.com/upload/1505731532.png';
@@ -67,11 +69,11 @@ export default class Footer {
             this.priHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';
             this.termSerHref = 'https://www.oasgames.com/TermsofService(EN).html';
         }
-        else if (this.lang === 'tw')
-        {
+        else if (this.lang === 'tw') {
             this.oasgame = 'oasgames.com/zh';
         }
     }
+
     forum() {
         if (this.forumBok) {
             this.forumContent = `<span>丨<a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>`;
@@ -79,13 +81,13 @@ export default class Footer {
             this.forumContent = '';
         }
     }
+
     IsLo() {
         this.LO = ['PL', 'PT', 'RU', 'TR'];
         this.langCase = '';
-        for(let i=0; i<this.LO.length; i++){
-            console.log(this.LO[i])
-            if(this.langToCase === this.LO[i]){
-                this.langCase = 'LO-'+this.langToCase;
+        for (let i = 0; i < this.LO.length; i++) {
+            if (this.langToCase === this.LO[i]) {
+                this.langCase = 'LO-' + this.langToCase;
             }
         }
         return this.langCase;
