@@ -84,7 +84,7 @@ export default class Footer {
 
     IsLo() {
         this.LO = ['PL', 'PT', 'RU', 'TR'];
-        this.langCase = '';
+        this.langCase = this.langToCase;
         for (let i = 0; i < this.LO.length; i++) {
             if (this.langToCase === this.LO[i]) {
                 this.langCase = 'LO-' + this.langToCase;

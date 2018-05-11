@@ -1,7 +1,7 @@
 import '../css/GDPR.css';
-import axios from '../common/axios';
 import browser from '../common/browser';
 import langPackage from '../js/lang';
+import axios from 'axios-jsonp-pro';
 
 export default class GDPR {
     constructor(data) {
@@ -16,16 +16,17 @@ export default class GDPR {
     _renderHtml() {
         this.PC = `<div class="fco-gdpr-box">
                         <p class="fco-gdpr-text">
-                            <span class="fco-gdpr-text-left">Our Privacy Policy is changing. You can view our prive Privacy Policy <a href="#">here</a></span>
-                            <a href="javascript:;" class="fco-gdpr-btn gdpr-btn">知道了</a>
+                            <span class="fco-gdpr-text-left">${this.langPackage.gdpr_text}</span>
+                            <a href="javascript:;" class="fco-gdpr-btn gdpr-btn">${this.langPackage.gdpr_btn}</a>
                         </p>
                     </div>`;
         this.WAP = `<div class="fco-gdpr-wap-box">
                         <p class="fco-gdpr-wap-text">
-                            <span class="fco-gdpr-wap-text-left">Our Privacy Policy is changing. You can view our prive Privacy Policy <a href="#">here</a></span>
-                            <a href="javascript:;" class="fco-gdpr-wap-btn gdpr-btn">知道了H5</a>
+                            <span class="fco-gdpr-wap-text-left">${this.langPackage.gdpr_text}</span>
+                            <a href="javascript:;" class="fco-gdpr-wap-btn gdpr-btn">${this.langPackage.gdpr_btn}</a>
                         </p>
                     </div>`;
+
         axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
             if (data.status === 'ok' && data.val.policy_acceptance === false) {
                 this.loginKey = data.val.loginKey;
@@ -60,12 +61,13 @@ export default class GDPR {
         let oBtn = document.querySelector('.gdpr-btn'),
             gapr = document.querySelector('#fco-gdpr');
         oBtn.onclick = function () {
-            axios.post('http://passport.oasgames.com/profile/policy-accept', {
-                passport_jwt: this.loginKey
-            }).then(function (data) {
+            let paramsString = "passport_jwt=" + this.loginKey;
+            let searchParams = new URLSearchParams(paramsString);
+
+            axios.post('http://passport.oasgames.com/profile/policy-accept', searchParams).then(function () {
                 gapr.style.display = 'none';
                 this.policy_acceptance = true;
-            });
-        }
+            }.bind(this));
+        }.bind(this)
     }
 }
