@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,26 +12,24 @@
     </style>
 </head>
 <body>
-<div id="footer">
-
-</div>
+<div id="footer"></div>
 <!--<div id="gdpr">-->
 
 <!--</div>-->
 
 <!--<script src="dist/scripts/test.min.js"></script>-->
 <script>
-    var fcoVersion = 'sss';
+    var fcoVersion = '2ss2222';
 </script>
-<script type="text/javascript" src="https://img.oasgames.com/fc-oasis/v2.0.1/loader.min.js"></script>
+<script type="text/javascript" src="https://img.oasgames.com/fc-oasis/v2.0.0.4/loader.min.js"></script>
 <script>
-    window.addEventListener('fcoready', function (fco) {
-        fco.detail.footer({
+    window.addEventListener('fcoready', function () {
+        FcoFooter({
             lang: 'en',
             'forumBok': true,
         }).fire('footer');
-        fco.detail.gdpr({
-            lang: 'en'
+        FcoGDPR({
+            lang: 'zh'
         });
     });
 </script>

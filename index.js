@@ -9,5 +9,7 @@ const gdpr = (data) => {
     return new GDPR(data);
 };
 
-let event = new CustomEvent('fcoready', {'detail': {'footer': footer, 'gdpr': gdpr}});
-window.dispatchEvent(event);
+exports = module.exports = {
+    FcoFooter: footer,
+    FcoGDPR: gdpr
+};

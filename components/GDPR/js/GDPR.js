@@ -3,28 +3,43 @@ import browser from '../common/browser';
 import langPackage from '../js/lang';
 import axios from 'axios-jsonp-pro';
 
-export default class GDPR {
+class GDPR {
     constructor(data) {
-        this.lang = data.lang || 'en';
-        this.langPackage = langPackage[this.lang];
-        this.browser = browser;
-        this._renderHtml();
-        this.loginKey = '';
-        this.policy_acceptance = '';
+        if (GDPR.gdprBok === false) {
+            this.lang = data.lang || 'en';
+            this.langPackage = langPackage[this.lang];
+            if (this.langPackage === undefined) {
+                this.lang = 'en';
+                this.langPackage = langPackage[this.lang];
+            }
+            this.browser = browser;
+            this._renderHtml();
+            this.loginKey = '';
+            this.policy_acceptance = '';
+        }
+
+        GDPR.gdprBok = true;
     }
 
     _renderHtml() {
         this.PC = `<div class="fco-gdpr-box">
-                        <p class="fco-gdpr-text">
-                            <span class="fco-gdpr-text-left">${this.langPackage.gdpr_text}</span>
-                            <a href="javascript:;" class="fco-gdpr-btn gdpr-btn">${this.langPackage.gdpr_btn}</a>
-                        </p>
+                        <div class="fco-gdpr-text">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                                <tr>
+                                    <td class="fco-gdpr-text-left" align="middle">${this.langPackage.gdpr_text}</td>
+                                    <td><a href="javascript:;" class="fco-gdpr-btn gdpr-btn">${this.langPackage.gdpr_btn}</a></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>`;
         this.WAP = `<div class="fco-gdpr-wap-box">
-                        <p class="fco-gdpr-wap-text">
-                            <span class="fco-gdpr-wap-text-left">${this.langPackage.gdpr_text}</span>
-                            <a href="javascript:;" class="fco-gdpr-wap-btn gdpr-btn">${this.langPackage.gdpr_btn}</a>
-                        </p>
+                        <div  class="fco-gdpr-wap-text">
+                            <p>
+                                <span class="fco-gdpr-wap-text-left">${this.langPackage.gdpr_text}</span>
+                                <a href="javascript:;" class="fco-gdpr-wap-btn gdpr-btn">${this.langPackage.gdpr_btn}</a>
+                            </p>
+                        </div>
+                        
                     </div>`;
 
         axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
@@ -71,3 +86,7 @@ export default class GDPR {
         }.bind(this)
     }
 }
+
+GDPR.gdprBok = false;
+
+export default GDPR;

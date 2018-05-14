@@ -12,8 +12,11 @@
     min-width: 1000px;
     margin: 0 auto;
     width: 1000px;
-    line-height: 80px;
     position: relative;
+}
+
+.fco-gdpr-text table {
+    height: 80px;
 }
 
 .fco-gdpr-btn {
@@ -36,9 +39,6 @@
 }
 
 .fco-gdpr-text-left {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 20px;
     color: #f2f2f2;
     width: 740px;
 }
@@ -68,7 +68,6 @@
     position: relative;
     font-size: 3.6vw;
 }
-
 .fco-gdpr-wap-btn {
     /*float: right;*/
     width: 20vw;

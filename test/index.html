@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,16 +22,17 @@
 
 <!--<script src="dist/scripts/test.min.js"></script>-->
 <script>
-    var fcoEnv = 'dev';
+    var fcoVersion = '122ssss';
 </script>
 <script type="text/javascript" src="dist/scripts/loader.min.js"></script>
+
 <script>
-    window.addEventListener('fcoready', function (fco) {
-        fco.detail.footer({
+    window.addEventListener('fcoready', function () {
+        FcoFooter({
             lang: 'en',
             'forumBok': true,
         }).fire('footer');
-        fco.detail.gdpr({
+        FcoGDPR({
             lang: 'zh'
         });
     });
