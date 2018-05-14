@@ -1,0 +1,100 @@
+@charset "utf-8";
+.fco-gdpr-box {
+    height: 80px;
+    background: rgba(30, 42, 57, 0.8);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.fco-gdpr-text {
+    min-width: 1000px;
+    margin: 0 auto;
+    width: 1000px;
+    position: relative;
+}
+
+.fco-gdpr-text table {
+    height: 80px;
+}
+
+.fco-gdpr-btn {
+    /*float: right;*/
+    width: 140px;
+    height: 40px;
+    background: rgba(41, 52, 66, 1);
+    box-sizing: border-box;
+    border: 2px solid rgba(22, 155, 213, 1);
+    border-radius: 10px;
+    line-height: 38px;
+    text-align: center;
+    color: #f2f2f2;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.fco-gdpr-text-left {
+    color: #f2f2f2;
+    width: 740px;
+}
+
+.fco-gdpr-text-left a {
+    color: rgba(22, 155, 213, 1);
+}
+
+/*H5*/
+#fco-gdpr{
+    font-size: 20px;
+}
+.fco-gdpr-wap-box {
+    /*height: .8rem;*/
+    background: rgba(30, 42, 57, 0.8);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 3vw;
+    padding: 3vw 0 3vw 3vw;
+}
+
+.fco-gdpr-wap-text {
+    width: 97vw;
+    line-height: 8vw;
+    position: relative;
+    font-size: 3.6vw;
+}
+.fco-gdpr-wap-btn {
+    /*float: right;*/
+    width: 20vw;
+    height: 8vw;
+    box-sizing: border-box;
+    border-radius: 1.5vw;
+    line-height: 8vw;
+    text-align: center;
+    color: #f2f2f2;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    right: 3vw;
+    top: 50%;
+    margin-top: -4vw;
+    font-size: 3.8vw;
+    background: #169bd5;
+}
+
+.fco-gdpr-wap-text-left {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 4.6vw;
+    color: #f2f2f2;
+    width: 70vw;
+}
+
+.fco-gdpr-wap-text-left a {
+    color: rgba(22, 155, 213, 1);
+}
