@@ -3,10 +3,13 @@
  */
 
 module.exports = {
-    entry: './index.js',
+    entry:{
+        runtime:'./index.js',
+        loader: './loader.js',
+    },
     output: {
         path: './dist',
-        filename: 'scripts/runtime.min.js',
+        filename: 'scripts/[name].min.js',
         libraryTarget: 'umd'
     },
     module: {
