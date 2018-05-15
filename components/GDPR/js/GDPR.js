@@ -13,7 +13,7 @@ class GDPR {
                 this.langPackage = langPackage[this.lang];
             }
             this.browser = browser;
-            this._renderHtml();
+            this.fire();
             this.loginKey = '';
             this.policy_acceptance = '';
         }
@@ -21,7 +21,7 @@ class GDPR {
         GDPR.gdprBok = true;
     }
 
-    _renderHtml() {
+    fire() {
         this.PC = `<div class="fco-gdpr-box">
                         <div class="fco-gdpr-text">
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" >
@@ -39,10 +39,9 @@ class GDPR {
                                 <a href="javascript:;" class="fco-gdpr-wap-btn gdpr-btn">${this.langPackage.gdpr_btn}</a>
                             </p>
                         </div>
-                        
                     </div>`;
 
-        axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
+        axios.jsonp('https://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
             if (data.status === 'ok' && data.val.policy_acceptance === false) {
                 this.loginKey = data.val.loginKey;
                 this.policy_acceptance = data.val.policy_acceptance;
@@ -79,7 +78,7 @@ class GDPR {
             let paramsString = "passport_jwt=" + this.loginKey;
             let searchParams = new URLSearchParams(paramsString);
 
-            axios.post('http://passport.oasgames.com/profile/policy-accept', searchParams).then(function () {
+            axios.post('https://passport.oasgames.com/profile/policy-accept', searchParams).then(function () {
                 gapr.style.display = 'none';
                 this.policy_acceptance = true;
             }.bind(this));

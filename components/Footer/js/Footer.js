@@ -20,18 +20,15 @@ export default class Footer {
         this.termSerHref = data.termSerHref || `https://www.oasgames.com/TermsofService(${this.langToCase}).html`;
         this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
         this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
-        this.footWidth = '609px';
-        this.footMinWidth = '609px';
         this.logoMarginT = '0';
         this.forumBok = data.forumBok || false;
-        this.backgroundColor = data.backgroundColor || '#000';
     }
 
     _renderHtml() {
         this.forum();
-        this.content = `<div id="fco-footer-footwrap" style="background-color: ${this.backgroundColor};min-width:${this.footMinWidth}">
+        this.content = `<div id="fco-footer-footwrap">
                             <div id="fco-footer-footBox" class="fco-footer-clearfix">
-                                <div id="fco-footer-foot" class="fco-footer-clearfix" style="width:${this.footWidth};">
+                                <div id="fco-footer-foot" class="fco-footer-clearfix">
                                     <div class="fco-footer-logo fco-footer-fl">
                                         <a href="${this.logoOasgame}" target="_blank">
                                             <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT}; border:none;">
@@ -62,8 +59,6 @@ export default class Footer {
     zhHtml() {
         if (this.lang === 'zh') {
             this.fLogo = 'https://img.oasgames.com/upload/1505731532.png';
-            this.footWidth = '685px';
-            this.footMinWidth = '685px';
             this.logoMarginT = '7px';
             this.oasgame = 'oasgames.com/zh';
             this.priHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';

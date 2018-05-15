@@ -25,15 +25,16 @@ const langPackage = {
     },
     'tr': {
         footer_abus: 'Hakkımızda',
-        footer_pri: 'Gizlilik Politikası',
+        footer_pri: 'Privacy Policy ',
         footer_term_ser: 'Servis',
         footer_forum: 'Forum',
         footer_his: 'OASIS GAMES LIMITED. Tüm haklar saklıdır.',
         footer_notice: 'Burada adı geçen tüm markalar kendi sahiplerinin mülkiyetindedir.'
     },
+    //瑞典
     'sv': {
         footer_abus: 'Om oss',
-        footer_pri: 'Integritetspolicy',
+        footer_pri: 'säkerhetspolicyn',
         footer_term_ser: 'Användarvillkor',
         footer_forum: 'Forum',
         footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
@@ -41,28 +42,31 @@ const langPackage = {
     },
     'ru': {
         footer_abus:'О нас',
-        footer_pri:'Политика конфид-ти',
+        footer_pri:'Privacy Policy ',
         footer_term_ser:'Пользовательское соглашение',
         footer_forum:'Форум',
         footer_his:'OASIS GAMES LIMITED. Все права зарегистрированы.',
         footer_notice:'Все упомянутые торговые марки являются соб-стью соотв-щих владельцев.'
     },
+    //葡萄牙
     'pt': {
         footer_abus:'Sobre nós',
-        footer_pri:'Política de Privacidade',
+        footer_pri:'Privacidade',
         footer_term_ser:'Termos de Serviço',
         footer_forum:'Fórum',
         footer_his:'OASIS GAMES LIMITED. Todos os direitos resevados.',
         footer_notice:'As marcas registradas são propriedade de seus respectivos proprietários.'
     },
+    //波兰
     'pl': {
         footer_abus:'O nas',
-        footer_pri:'Polityka prywatności',
+        footer_pri:'Politykę prywatności',
         footer_term_ser:'Warunki korzystania z usług',
         footer_forum:'Forum',
         footer_his:'OASIS GAMES Spółka z o.o. Wszystkie prawa zastrzeżone.',
         footer_notice:'Wszystkie wykorzystywane znaki handlowe są własnością ich właścicieli.'
     },
+    //荷兰
     'nl': {
         footer_abus:'Over ons',
         footer_pri:'Privacybeleid',
@@ -71,25 +75,28 @@ const langPackage = {
         footer_his:'OASIS GAMES LIMITED.Auteursrechten voorbehouden',
         footer_notice:'Alle onderhavige handelsmerken zijn eigendom van hun betreffende eigenaars'
     },
+    //意大利
     'it': {
         footer_abus:'Su di noi',
-        footer_pri:'Informativa sulla privacy',
+        footer_pri:'normativa sulla privacy.',
         footer_term_ser:'Termini di servizio',
         footer_forum:'Forum',
         footer_his:'OASIS GAMES LIMITED. Tutti i diritti riservati.',
         footer_notice:'Tutti i marchi registrati appartengono ai rispettivi proprietari.'
     },
+    //法语
     'fr': {
         footer_abus:"À propos",
-        footer_pri:"Règles de confidentialité",
+        footer_pri:"Confidentialité.",
         footer_term_ser:"Conditions de service",
         footer_forum:"Forum",
         footer_his:"OASIS GAMES LIMITED. Tous droits réservés.",
         footer_notice:"Toutes les marques référées sont la propriété de leurs propriétaires respectifs."
     },
+    //希腊
     'el': {
         footer_abus: 'Σχετικά με μας',
-        footer_pri: 'Πολιτική απορρήτου',
+        footer_pri: 'πολιτική απορρήτου',
         footer_term_ser: 'Όροι υπηρεσίας',
         footer_forum: 'Φόρουμ',
         footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
@@ -97,7 +104,7 @@ const langPackage = {
     },
     'de': {
         footer_abus: 'Über uns',
-        footer_pri: 'Datenschutzrichtlinien',
+        footer_pri: 'Privatsphärerichtlinien',
         footer_term_ser: 'Nutzungsbedingungen',
         footer_forum: 'Forum',
         footer_his: 'OASIS GAMES LIMITED. Alle Rechte vorbehalten.',
@@ -105,12 +112,13 @@ const langPackage = {
     },
     'ar': {
         footer_abus: 'من نحن',
-        footer_pri: 'الخصوصية',
+        footer_pri: 'Privacy Policy ',
         footer_term_ser: 'شروط الخدمة',
         footer_forum: 'المنتدى',
         footer_his: 'OASIS GAMES LIMITED. جميع الحقوق محفوظة',
         footer_notice: 'المنتدى / شروط الخدمة / شروط الخصوصية / من نحن'
     },
+    //西班牙
     'es': {
         footer_abus: 'Sobre Nosotros',
         footer_pri: 'Política de Privacidad',
@@ -122,7 +130,7 @@ const langPackage = {
     //日语
     'ja': {
         footer_abus : 'お問い合わせ',
-        footer_pri : 'プライバシーポリシー',
+        footer_pri : 'Privacy Policy ',
         footer_term_ser : 'サービス利用規約',
         footer_forum : 'フォーラム',
         footer_his : 'OASIS GAMES LIMITED.に著作権を所有する.',
@@ -131,7 +139,7 @@ const langPackage = {
     //泰语
     'th': {
         footer_abus : 'เกี่ยวกับพวกเรา',
-        footer_pri : 'นโยบายความเป็นส่วนตัว',
+        footer_pri : 'Privacy Policy ',
         footer_term_ser : 'เงื่อนไขการบริการ',
         footer_forum : 'ฟอรั่ม',
         footer_his : 'OASIS GAMES LIMITED. All rights reserved.',
@@ -140,7 +148,7 @@ const langPackage = {
     //越南语
     'vi':{
         footer_abus: 'Về chúng tôi',
-        footer_pri: 'Chính sách quyền riêng tư ',
+        footer_pri: 'Privacy Policy ',
         footer_term_ser: 'Điều khoản phục vụ ',
         footer_forum: 'Diễn đàn',
         footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
