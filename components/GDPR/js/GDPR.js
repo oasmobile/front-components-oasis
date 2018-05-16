@@ -13,9 +13,12 @@ class GDPR {
                 this.langPackage = langPackage[this.lang];
             }
             this.browser = browser;
+            this.forceBok = data.forceBok || false;
             this.fire();
             this.loginKey = '';
             this.policy_acceptance = '';
+
+
         }
 
         GDPR.gdprBok = true;
@@ -40,27 +43,22 @@ class GDPR {
                             </p>
                         </div>
                     </div>`;
-
-        axios.jsonp('https://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
-            if (data.status === 'ok' && data.val.policy_acceptance === false) {
-                this.loginKey = data.val.loginKey;
-                this.policy_acceptance = data.val.policy_acceptance;
-            }
-            //判断用户有没有点击过知道了这个按钮
-            if (this.policy_acceptance === false) {
-                //检测设备
-                if (this.browser.versions.mobile || this.browser.versions.ios || this.browser.versions.android ||
-                    this.browser.versions.iPhone || this.browser.versions.iPad) {
-                    // px2rem();
-                    this.GDPRBox(this.WAP);
-                    this.ClickFn();
-
-                } else {
-                    this.GDPRBox(this.PC);
-                    this.ClickFn();
+        if(!this.forceBok){
+            axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
+                if (data.status === 'ok' && data.val.policy_acceptance === false) {
+                    this.loginKey = data.val.loginKey;
+                    this.policy_acceptance = data.val.policy_acceptance;
                 }
-            }
-        }.bind(this));
+                //判断用户有没有点击过知道了这个按钮
+                if (this.policy_acceptance === false) {
+                    //检测设备
+                    this.AddContent();
+                }
+            }.bind(this));
+        }else{
+            //检测设备
+            this.AddContent();
+        }
     }
 
     GDPRBox(content) {
@@ -77,12 +75,26 @@ class GDPR {
         oBtn.onclick = function () {
             let paramsString = "passport_jwt=" + this.loginKey;
             let searchParams = new URLSearchParams(paramsString);
-
-            axios.post('https://passport.oasgames.com/profile/policy-accept', searchParams).then(function () {
+            if(this.forceBok){
+                gapr.style.display = 'none';
+                return false;
+            }
+            axios.post('http://passport.oasgames.com/profile/policy-accept', searchParams).then(function () {
                 gapr.style.display = 'none';
                 this.policy_acceptance = true;
             }.bind(this));
         }.bind(this)
+    }
+    AddContent() {
+        if (this.browser.versions.mobile || this.browser.versions.ios || this.browser.versions.android ||
+            this.browser.versions.iPhone || this.browser.versions.iPad) {
+            this.GDPRBox(this.WAP);
+            this.ClickFn();
+
+        } else {
+            this.GDPRBox(this.PC);
+            this.ClickFn();
+        }
     }
 }
 

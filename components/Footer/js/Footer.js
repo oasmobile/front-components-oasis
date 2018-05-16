@@ -19,9 +19,14 @@ export default class Footer {
         this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.termSerHref = data.termSerHref || `https://www.oasgames.com/TermsofService(${this.langToCase}).html`;
         this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
+        this.privacyHref = data.privacyHref || `http://www.oasgames.com/privacy_control/PrivacyControl(${this.langToCase}).html `;
         this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
         this.logoMarginT = '0';
         this.forumBok = data.forumBok || false;
+        if(this.langToCase !== 'ZH'){
+            this.privacyHref = 'http://www.oasgames.com/privacy_control/PrivacyControl(EN).html '
+        }
+        this.priHrefFn();
     }
 
     _renderHtml() {
@@ -38,7 +43,7 @@ export default class Footer {
                                         <div>
                                             <a target="_blank" href="http://${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a>
                                             丨<a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
-                                            丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>
+                                            丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>丨<a target="_blank" href="${this.privacyHref}">${this.langContent.footer_privacy}</a>
                                             ${this.forumContent}
                                         </div>
                                         <p>©2012-${this.year} ${this.langContent.footer_his}</p>
@@ -75,5 +80,15 @@ export default class Footer {
         } else {
             this.forumContent = '';
         }
+    }
+
+    priHrefFn(){
+        this.priArr = ['EN','FR','IT','PL','ZH'];
+        for (let i = 0; i < this.priArr.length; i++) {
+            if (this.langToCase !== this.priArr[i]) {
+                this.priHref = "https://www.oasgames.com/PrivacyPolicy(EN).html";
+            }
+        }
+
     }
 }

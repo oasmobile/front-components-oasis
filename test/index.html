@@ -22,18 +22,20 @@
 
 <!--<script src="dist/scripts/test.min.js"></script>-->
 <script>
-    var fcoVersion = '22';
+    var fcoVersion = '22sd';
+    var fcoEnv = 'dev';
 </script>
 <script type="text/javascript" src="dist/scripts/loader.min.js"></script>
 
 <script>
     window.addEventListener('fcoready', function () {
         FcoFooter({
-            lang: 'en',
-            'forumBok': true,
+            lang: 'pl',
+            'forumBok': true
         }).fire('footer');
         FcoGDPR({
-            lang: 'zh'
+            lang: 'zh',
+            forceBok: false
         });
     });
 </script>
