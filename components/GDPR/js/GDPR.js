@@ -6,28 +6,23 @@ import getCookie from '../common/cookie';
 
 class GDPR {
     constructor(data) {
-        if (GDPR.gdprBok === false) {
-            this.lang = data.lang || 'en';
+        this.lang = data.lang || 'en';
+        this.langPackage = langPackage[this.lang];
+        if (this.langPackage === undefined) {
+            this.lang = 'en';
             this.langPackage = langPackage[this.lang];
-            if (this.langPackage === undefined) {
-                this.lang = 'en';
-                this.langPackage = langPackage[this.lang];
-            }
-            this.browser = browser;
-            this.forceBok = data.forceBok || false;
-            this.defaultFireBok = data.defaultFireBok || false;
-            this.gameboxBok = data.gameboxBok || false;
-            this.cookieCode = getCookie;
+        }
+        this.browser = browser;
+        this.forceBok = data.forceBok || false;
+        this.defaultFireBok = data.defaultFireBok || true;
+        this.gameboxBok = data.gameboxBok || false;
+        this.loginKey = '';
+        this.policy_acceptance = '';
 
-            //cookie 检测用户是否登录
-            this.intervalCookie();
-
+        if (GDPR.gdprBok === false) {
             if (this.defaultFireBok) {
                 this.fire();
             }
-
-            this.loginKey = '';
-            this.policy_acceptance = '';
         }
 
         GDPR.gdprBok = true;
@@ -85,7 +80,7 @@ class GDPR {
                     }
                 }.bind(this));
             }
-            catch(e) {
+            catch (e) {
                 this.fcogdprfinished();
                 console.log('[FcoGDPR] passport get login user error!!!');
             }
@@ -141,18 +136,17 @@ class GDPR {
                     this.policy_acceptance = true;
                 }.bind(this));
             }
-            catch(e) {
+            catch (e) {
                 console.log('[FcoGDPR] passport policy accept error!!!');
             }
-            finally
-            {
+            finally {
                 this.fcogdprfinished();
             }
         }.bind(this);
     }
 
     addContent() {
-        if(this.gameboxBok){
+        if (this.gameboxBok) {
             this.GDPRBox(this.gameTpl);
             this.clickFn();
             return false;
