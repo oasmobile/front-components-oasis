@@ -51,7 +51,6 @@ class GDPR {
                                 <a href="javascript:;" class="fco-gdpr-wap-btn" id="gdpr-btn">${this.langPackage.gdpr_btn}</a>
                             </p>
                         </div>
-                        
                     </div>`;
         //熊哥组 模板特殊处理
         this.gameTpl = `<div class="fco-gdpr-tpl-box">

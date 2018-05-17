@@ -14,9 +14,11 @@ if (typeof(fcoEnv) !== 'undefined' && fcoEnv === 'dev') {
     fcoEnvUrl = 'dist/scripts/runtime.min.js';
 }
 
-script.src = fcoEnvUrl + '?' + 'timestamp=' + timestamp + version;
 script.type = 'text/javascript';
-script.setAttribute('id','fcoScript');
+script.async = true;
+script.src = fcoEnvUrl + '?' + 'timestamp=' + timestamp + version;
+script.setAttribute('id', 'fcoScript');
+
 script.onload = function () {
     let event = new CustomEvent('fcoready');
     window.dispatchEvent(event);

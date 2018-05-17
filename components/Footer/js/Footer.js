@@ -16,22 +16,24 @@ export default class Footer {
         this.langToCase = this.lang.toLocaleUpperCase();
         this.logoOasgame = data.logoOasgame || `http://${this.lang}.oasgames.com`;
         this.oasgame = 'oasgames.com/en';
-        this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.IsLo()}).html`;
+        this.priHref = data.priHref || `http://test.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.termSerHref = data.termSerHref || `https://www.oasgames.com/TermsofService(${this.langToCase}).html`;
         this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
+        this.privacyHref = data.privacyHref || `http://www.oasgames.com/privacy_control/PrivacyControl(${this.langToCase}).html `;
         this.fLogo = 'https://img.oasgames.com/upload/1505731497.png';
-        this.footWidth = '609px';
-        this.footMinWidth = '609px';
         this.logoMarginT = '0';
         this.forumBok = data.forumBok || false;
-        this.backgroundColor = data.backgroundColor || '#000';
+        if(this.langToCase !== 'ZH'){
+            this.privacyHref = 'http://www.oasgames.com/privacy_control/PrivacyControl(EN).html '
+        }
+        this.priHrefFn();
     }
 
     _renderHtml() {
         this.forum();
-        this.content = `<div id="fco-footer-footwrap" style="background-color: ${this.backgroundColor};min-width:${this.footMinWidth}">
+        this.content = `<div id="fco-footer-footwrap">
                             <div id="fco-footer-footBox" class="fco-footer-clearfix">
-                                <div id="fco-footer-foot" class="fco-footer-clearfix" style="width:${this.footWidth};">
+                                <div id="fco-footer-foot" class="fco-footer-clearfix">
                                     <div class="fco-footer-logo fco-footer-fl">
                                         <a href="${this.logoOasgame}" target="_blank">
                                             <img src="${this.fLogo}" style="margin-top: ${this.logoMarginT}; border:none;">
@@ -41,7 +43,7 @@ export default class Footer {
                                         <div>
                                             <a target="_blank" href="http://${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a>
                                             丨<a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
-                                            丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>
+                                            丨<a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a>丨<a target="_blank" href="${this.privacyHref}">${this.langContent.footer_privacy}</a>
                                             ${this.forumContent}
                                         </div>
                                         <p>©2012-${this.year} ${this.langContent.footer_his}</p>
@@ -62,8 +64,6 @@ export default class Footer {
     zhHtml() {
         if (this.lang === 'zh') {
             this.fLogo = 'https://img.oasgames.com/upload/1505731532.png';
-            this.footWidth = '685px';
-            this.footMinWidth = '685px';
             this.logoMarginT = '7px';
             this.oasgame = 'oasgames.com/zh';
             this.priHref = 'https://www.oasgames.com/PrivacyPolicy(EN).html';
@@ -82,14 +82,13 @@ export default class Footer {
         }
     }
 
-    IsLo() {
-        this.LO = ['PL', 'PT', 'RU', 'TR'];
-        this.langCase = this.langToCase;
-        for (let i = 0; i < this.LO.length; i++) {
-            if (this.langToCase === this.LO[i]) {
-                this.langCase = 'LO-' + this.langToCase;
+    priHrefFn(){
+        this.priArr = ['EN','FR','IT','PL','ZH'];
+        for (let i = 0; i < this.priArr.length; i++) {
+            if (this.langToCase !== this.priArr[i]) {
+                this.priHref = "http://test.oasgames.com/PrivacyPolicy(EN).html";
             }
         }
-        return this.langCase;
+
     }
 }
