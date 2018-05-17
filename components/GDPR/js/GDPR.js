@@ -2,6 +2,7 @@ import '../css/GDPR.css';
 import browser from '../common/browser';
 import langPackage from '../js/lang';
 import axios from 'axios-jsonp-pro';
+import getCookie from '../common/getCookie';
 
 class GDPR {
     constructor(data) {
@@ -14,11 +15,15 @@ class GDPR {
             }
             this.browser = browser;
             this.forceBok = data.forceBok || false;
-            this.fire();
+            this.defaultFireBok = data.defaultFireBok || true;
+            this.gameboxBok = data.gameboxBok || false;
+          
+            if (this.defaultFireBok) {
+                this.fire();
+            }
+
             this.loginKey = '';
             this.policy_acceptance = '';
-
-
         }
 
         GDPR.gdprBok = true;
@@ -43,21 +48,46 @@ class GDPR {
                             </p>
                         </div>
                     </div>`;
-        if(!this.forceBok){
-            axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
-                if (data.status === 'ok' && data.val.policy_acceptance === false) {
-                    this.loginKey = data.val.loginKey;
-                    this.policy_acceptance = data.val.policy_acceptance;
-                }
-                //判断用户有没有点击过知道了这个按钮
-                if (this.policy_acceptance === false) {
-                    //检测设备
-                    this.AddContent();
-                }
-            }.bind(this));
-        }else{
+        //熊哥组 模板特殊处理
+        this.gameTpl = `<div class="fco-gdpr-tpl-box">
+                        <div class="fco-gdpr-tpl-text">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                                <tr>
+                                    <td class="fco-gdpr-text-tpl-left" align="middle"><p>${this.langPackage.gdpr_text}</p>
+                                        <a href="javascript:;" class="fco-gdpr-tpl-btn gdpr-btn">${this.langPackage.gdpr_btn}</a>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                        </div>
+                    </div>`;
+        if (!this.forceBok) {
+            try {
+                axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
+                    if (data.status === 'ok') {
+                        if (data.val.policy_acceptance === false) {
+                            this.loginKey = data.val.loginKey;
+                            this.policy_acceptance = data.val.policy_acceptance;
+                        }
+                        else if (data.val.policy_acceptance === true) {
+                            this.fcogdprfinished();
+                            return;
+                        }
+                    }
+                    //判断用户有没有点击过知道了这个按钮
+                    if (this.policy_acceptance === false) {
+                        //检测设备
+                        this.addContent();
+                    }
+                }.bind(this));
+            }
+            catch(e) {
+                this.fcogdprfinished();
+                console.log('[FcoGDPR] passport get login user error!!!');
+            }
+        } else {
             //检测设备
-            this.AddContent();
+            this.addContent();
         }
     }
 
@@ -69,32 +99,52 @@ class GDPR {
         Body.appendChild(gdpr);
     }
 
-    ClickFn() {
+    clickFn() {
         let oBtn = document.querySelector('.gdpr-btn'),
             gapr = document.querySelector('#fco-gdpr');
         oBtn.onclick = function () {
             let paramsString = "passport_jwt=" + this.loginKey;
             let searchParams = new URLSearchParams(paramsString);
-            if(this.forceBok){
+            if (this.forceBok) {
                 gapr.style.display = 'none';
                 return false;
             }
-            axios.post('http://passport.oasgames.com/profile/policy-accept', searchParams).then(function () {
-                gapr.style.display = 'none';
-                this.policy_acceptance = true;
-            }.bind(this));
-        }.bind(this)
+
+            try {
+                axios.post('http://passport.oasgames.com/profile/policy-accept', searchParams).then(function () {
+                    gapr.style.display = 'none';
+                    this.policy_acceptance = true;
+                }.bind(this));
+            }
+            catch(e) {
+                console.log('[FcoGDPR] passport policy accept error!!!');
+            }
+            finally
+            {
+                this.fcogdprfinished();
+            }
+        }.bind(this);
     }
-    AddContent() {
+
+    addContent() {
+        if(this.gameboxBok){
+            this.GDPRBox(this.gameTpl);
+            this.clickFn();
+            return false;
+        }
         if (this.browser.versions.mobile || this.browser.versions.ios || this.browser.versions.android ||
             this.browser.versions.iPhone || this.browser.versions.iPad) {
             this.GDPRBox(this.WAP);
-            this.ClickFn();
-
+            this.clickFn();
         } else {
             this.GDPRBox(this.PC);
-            this.ClickFn();
+            this.clickFn();
         }
+    }
+
+    fcogdprfinished() {
+        let event = new CustomEvent('fcogdprfinished');
+        window.dispatchEvent(event);
     }
 }
 

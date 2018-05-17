@@ -16,7 +16,7 @@ export default class Footer {
         this.langToCase = this.lang.toLocaleUpperCase();
         this.logoOasgame = data.logoOasgame || `http://${this.lang}.oasgames.com`;
         this.oasgame = 'oasgames.com/en';
-        this.priHref = data.priHref || `https://www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
+        this.priHref = data.priHref || `http://test.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.termSerHref = data.termSerHref || `https://www.oasgames.com/TermsofService(${this.langToCase}).html`;
         this.forumHref = data.forumHref || `http://${this.langToCase}.forum.oasgames.com`;
         this.privacyHref = data.privacyHref || `http://www.oasgames.com/privacy_control/PrivacyControl(${this.langToCase}).html `;
@@ -86,7 +86,7 @@ export default class Footer {
         this.priArr = ['EN','FR','IT','PL','ZH'];
         for (let i = 0; i < this.priArr.length; i++) {
             if (this.langToCase !== this.priArr[i]) {
-                this.priHref = "https://www.oasgames.com/PrivacyPolicy(EN).html";
+                this.priHref = "http://test.oasgames.com/PrivacyPolicy(EN).html";
             }
         }
 
