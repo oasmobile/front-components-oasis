@@ -6,6 +6,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 5000;
+    overflow-x: auto;
 }
 
 .fco-gdpr-text {
@@ -41,12 +43,63 @@
 .fco-gdpr-text-left {
     color: #f2f2f2;
     width: 740px;
+    word-break: normal !important;
+    word-wrap: break-word;
 }
 
 .fco-gdpr-text-left a {
     color: rgba(22, 155, 213, 1);
 }
 
+/*熊哥组特殊处理*/
+.fco-gdpr-tpl-box {
+    height: 362px;
+    background: #1e2a39;
+    width: 608px;
+    opacity: 0.8;
+    position: relative;
+    z-index: 5000;
+}
+
+.fco-gdpr-tpl-text {
+    margin: 0 auto;
+    width: 542px;
+    position: relative;
+}
+
+.fco-gdpr-tpl-text table {
+    height: 362px;
+}
+
+.fco-gdpr-tpl-btn {
+    /*float: right;*/
+    width: 140px;
+    height: 40px;
+    background: #293442;
+    box-sizing: border-box;
+    border: 2px solid #169bd5;
+    border-radius: 10px;
+    line-height: 38px;
+    text-align: center;
+    color: #f2f2f2;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+}
+
+.fco-gdpr-text-tpl-left {
+    color: #f2f2f2;
+    width: 560px;
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+.fco-gdpr-text-tpl-left p{
+    text-align: left;
+}
+.fco-gdpr-text-tpl-left a {
+    color: #169bd5;
+}
 /*H5*/
 #fco-gdpr{
     font-size: 20px;
