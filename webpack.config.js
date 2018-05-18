@@ -2,9 +2,11 @@
  * Created by user on 16/6/2.
  */
 
+const webpack = require('webpack');
+
 module.exports = {
-    entry:{
-        runtime:'./index.js',
+    entry: {
+        runtime: './index.js',
         loader: './loader.js',
     },
     output: {
@@ -25,5 +27,10 @@ module.exports = {
                 loader: 'css-loader',
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        })
+    ]
 };

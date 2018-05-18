@@ -1,3 +1,4 @@
+import './common/base';
 import Footer from './components/Footer/js/Footer';
 import GDPR from './components/GDPR/js/GDPR';
 
