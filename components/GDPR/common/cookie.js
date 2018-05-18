@@ -7,7 +7,7 @@ function getCookie(cname) {
         while (c.charAt(0) === ' ') c = c.substring(1);
         if (c.indexOf(name) !== -1) return c.substring(name.length, c.length);
     }
-    return "sssd";
+    return "";
 }
 
 //写cookies
@@ -17,4 +17,4 @@ function setCookie(name, value) {
     exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
     document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
 }
-export  default getCookie;
+export {getCookie, setCookie};
