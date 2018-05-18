@@ -14,7 +14,7 @@ class GDPR {
         }
         this.browser = browser;
         this.forceBok = data.forceBok || false;
-        this.defaultFireBok = data.defaultFireBok || true;
+        this.defaultFireBok = data.defaultFireBok || false;
         this.gameboxBok = data.gameboxBok || false;
         this.loginKey = '';
         this.policy_acceptance = '';
@@ -22,15 +22,17 @@ class GDPR {
         this.setCookie = setCookie;
 
         if (GDPR.gdprBok === false) {
-            if (this.defaultFireBok) {
+            if (!this.defaultFireBok) {
                 this.fire();
+            }else{
+                this.fire(true);
             }
         }
 
         GDPR.gdprBok = true;
     }
 
-    fire() {
+    fire(bok) {
         this.PC = `<div class="fco-gdpr-box">
                         <div class="fco-gdpr-text">
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" >
@@ -64,29 +66,17 @@ class GDPR {
                     </div>`;
         if (!this.forceBok) {
             try {
-                this.time = setInterval(function () {
-                    console.log(this.getCookie('oas_user'))
-                    if (this.getCookie('oas_user')) {
-                        clearInterval(this.time);
-                        axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
-                            if (data.status === 'ok') {
-                                if (data.val.policy_acceptance === false) {
-                                    this.loginKey = data.val.loginKey;
-                                    this.policy_acceptance = data.val.policy_acceptance;
-                                }
-                                else if (data.val.policy_acceptance === true) {
-                                    this.fcogdprfinished();
-                                    return;
-                                }
-                            }
-                            //判断用户有没有点击过知道了这个按钮
-                            if (this.policy_acceptance === false) {
-                                //检测设备
-                                this.addContent();
-                            }
-                        }.bind(this));
-                    }
-                }.bind(this), 1000);
+                if(bok){
+                    this.noIntervalFire();
+                }else{
+                    this.time = setInterval(function () {
+                        console.log(this.getCookie('oas_user'));
+                        if (this.getCookie('oas_user')) {
+                            clearInterval(this.time);
+                            this.noIntervalFire();
+                        }
+                    }.bind(this), 200);
+                }
             }
             catch (e) {
                 this.fcogdprfinished();
@@ -178,6 +168,25 @@ class GDPR {
     fcogdprfinished() {
         let event = new CustomEvent('fcogdprfinished');
         window.dispatchEvent(event);
+    }
+    noIntervalFire(){
+        axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
+            if (data.status === 'ok') {
+                if (data.val.policy_acceptance === false) {
+                    this.loginKey = data.val.loginKey;
+                    this.policy_acceptance = data.val.policy_acceptance;
+                }
+                else if (data.val.policy_acceptance === true) {
+                    this.fcogdprfinished();
+                    return;
+                }
+            }
+            //判断用户有没有点击过知道了这个按钮
+            if (this.policy_acceptance === false) {
+                //检测设备
+                this.addContent();
+            }
+        }.bind(this));
     }
 }
 
