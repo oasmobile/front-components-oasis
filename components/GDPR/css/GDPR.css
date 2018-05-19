@@ -1,4 +1,8 @@
 @charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, p, blockquote, th, td, form {
+    margin: 0;
+    padding: 0;
+}
 .fco-gdpr-box {
     height: 80px;
     background: rgba(30, 42, 57, 0.8);
@@ -57,7 +61,8 @@
     background: #1e2a39;
     width: 608px;
     opacity: 0.8;
-    position: relative;
+    position: absolute;
+    top: 0;
     z-index: 5000;
 }
 

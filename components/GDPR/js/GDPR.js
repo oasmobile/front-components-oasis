@@ -3,6 +3,8 @@ import browser from '../common/browser';
 import langPackage from '../js/lang';
 import axios from 'axios-jsonp-pro';
 import {getCookie, setCookie} from '../common/cookie';
+import CustomEvent from 'custom-event';
+import 'babel-polyfill';
 
 class GDPR {
     constructor(data) {
@@ -14,7 +16,7 @@ class GDPR {
         }
         this.browser = browser;
         this.forceBok = data.forceBok || false;
-        this.defaultFireBok = data.defaultFireBok || true;
+        this.defaultFireBok = typeof(data.defaultFireBok) === 'undefined' ? true : data.defaultFireBok;
         this.gameboxBok = data.gameboxBok || false;
         this.loginKey = '';
         this.policy_acceptance = '';
@@ -188,6 +190,7 @@ class GDPR {
             }.bind(this));
         }
         catch (e) {
+            console.error(e);
             this.fcogdprfinished();
             console.error('[FcoGDPR] passport get login user error!!!');
         }

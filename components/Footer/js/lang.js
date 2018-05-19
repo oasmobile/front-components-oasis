@@ -24,7 +24,7 @@ const langPackage = {
         footer_forum:'論壇',
         footer_his:'OASIS GAMES LIMITED. All rights reserved.',
         footer_notice:'這裡所提的商標都是各自所有者的財產.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: '隱私控制'
     },
     //土语
     'tr': {
@@ -34,7 +34,7 @@ const langPackage = {
         footer_forum: 'Forum',
         footer_his: 'OASIS GAMES LIMITED. Tüm haklar saklıdır.',
         footer_notice: 'Burada adı geçen tüm markalar kendi sahiplerinin mülkiyetindedir.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Gizlilik Kontrolü'
     },
     //瑞典
     'sv': {
@@ -54,7 +54,7 @@ const langPackage = {
         footer_forum:'Форум',
         footer_his:'OASIS GAMES LIMITED. Все права зарегистрированы.',
         footer_notice:'Все упомянутые торговые марки являются соб-стью соотв-щих владельцев.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Контроль конфиденциальности'
     },
     //葡萄牙
     'pt': {
@@ -64,7 +64,7 @@ const langPackage = {
         footer_forum:'Fórum',
         footer_his:'OASIS GAMES LIMITED. Todos os direitos resevados.',
         footer_notice:'As marcas registradas são propriedade de seus respectivos proprietários.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Controle de Privacidade'
     },
     //波兰
     'pl': {
@@ -74,7 +74,7 @@ const langPackage = {
         footer_forum:'Forum',
         footer_his:'OASIS GAMES Spółka z o.o. Wszystkie prawa zastrzeżone.',
         footer_notice:'Wszystkie wykorzystywane znaki handlowe są własnością ich właścicieli.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Kontrola prywatności'
     },
     //荷兰
     'nl': {
@@ -84,7 +84,7 @@ const langPackage = {
         footer_forum:'Forum',
         footer_his:'OASIS GAMES LIMITED.Auteursrechten voorbehouden',
         footer_notice:'Alle onderhavige handelsmerken zijn eigendom van hun betreffende eigenaars',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Privacybeheer'
     },
     //意大利
     'it': {
@@ -94,7 +94,7 @@ const langPackage = {
         footer_forum:'Forum',
         footer_his:'OASIS GAMES LIMITED. Tutti i diritti riservati.',
         footer_notice:'Tutti i marchi registrati appartengono ai rispettivi proprietari.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Controllo della privacy'
     },
     //法语
     'fr': {
@@ -104,7 +104,7 @@ const langPackage = {
         footer_forum:"Forum",
         footer_his:"OASIS GAMES LIMITED. Tous droits réservés.",
         footer_notice:"Toutes les marques référées sont la propriété de leurs propriétaires respectifs.",
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Contrôle de Confidentialité'
     },
     //希腊
     'el': {
@@ -114,7 +114,7 @@ const langPackage = {
         footer_forum: 'Φόρουμ',
         footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
         footer_notice: 'Τα εμπ. σήματα που αναφ. στο παρόν είναι ιδιοκτ. των αντίστ. ιδιοκτ. τους.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Διαχείριση προσωπικών δεδομένων'
     },
     //德语
     'de': {
@@ -124,7 +124,7 @@ const langPackage = {
         footer_forum: 'Forum',
         footer_his: 'OASIS GAMES LIMITED. Alle Rechte vorbehalten.',
         footer_notice: 'Alle hier verwendeten Markenzeichen sind das Eigentum ihrer Besitzer.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Privatsphäreeinstellungen'
     },
     //阿语
     'ar': {
@@ -134,7 +134,7 @@ const langPackage = {
         footer_forum: 'المنتدى',
         footer_his: 'OASIS GAMES LIMITED. جميع الحقوق محفوظة',
         footer_notice: 'المنتدى / شروط الخدمة / شروط الخصوصية / من نحن',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'مراقبة الخصوصية'
     },
     //西班牙
     'es': {
@@ -144,7 +144,7 @@ const langPackage = {
         footer_forum: 'Foro',
         footer_his: 'OASIS GAMES LIMITED. Todos los derechos reservados.',
         footer_notice: 'La marcas registradas referenciadas son propiedad de sus respectivos dueños.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Control de Privacidad'
     },
     //日语
     'ja': {
@@ -154,7 +154,7 @@ const langPackage = {
         footer_forum : 'フォーラム',
         footer_his : 'OASIS GAMES LIMITED.に著作権を所有する.',
         footer_notice :'著作者および発行者の許可なく転載・複製することを禁じます.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'プライバシー設置'
     },
     //泰语
     'th': {
@@ -164,7 +164,7 @@ const langPackage = {
         footer_forum : 'ฟอรั่ม',
         footer_his : 'OASIS GAMES LIMITED. All rights reserved.',
         footer_notice : 'เครื่องหมายการค้าทั้งหมด เป็นทรัพย์สินของเจ้าของที่เกี่ยวข้องแต่เพียงผู้เดียว',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'การควบคุมความเป็นส่วนตัว'
     },
     //越南语
     'vi':{
@@ -174,7 +174,7 @@ const langPackage = {
         footer_forum: 'Diễn đàn',
         footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
         footer_notice: 'Tất cả nhãn hiệu được nhắc đến tại đây thuộc sở hữu của nhiều đối tượng',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Khống chế riêng tư'
     }
 };
 

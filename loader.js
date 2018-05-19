@@ -1,3 +1,5 @@
+import CustomEvent from 'custom-event';
+
 let head = document.head,
     script = document.createElement('script'),
     ms = Math.floor(new Date().getTime() / 1000),
@@ -6,12 +8,12 @@ let head = document.head,
     version = '',
     fcoEnvUrl = 'https://img.oasgames.com/fc-oasis/runtime.min.js';
 
-if (typeof(fcoVersion) !== 'undefined') {
-    version = '&version=' + fcoVersion;
+if (typeof(fcoUrl) !== 'undefined') {
+    fcoEnvUrl = fcoUrl;
 }
 
-if (typeof(fcoEnv) !== 'undefined' && fcoEnv === 'dev') {
-    fcoEnvUrl = 'dist/scripts/runtime.min.js';
+if (typeof(fcoVersion) !== 'undefined') {
+    version = '&version=' + fcoVersion;
 }
 
 script.type = 'text/javascript';
@@ -25,7 +27,7 @@ script.onload = function () {
 };
 
 let fcoGdprBox = document.querySelector('#fcoScript');
-if(!fcoGdprBox){
+if (!fcoGdprBox) {
     head.appendChild(script);
 }
 
