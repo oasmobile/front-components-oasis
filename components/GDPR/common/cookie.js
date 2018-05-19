@@ -7,7 +7,7 @@ function getCookie(cname) {
         while (c.charAt(0) === ' ') c = c.substring(1);
         if (c.indexOf(name) !== -1) return c.substring(name.length, c.length);
     }
-    return "";
+    return "123";
 }
 
 //写cookies

@@ -5,7 +5,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
 }
 .fco-gdpr-box {
     height: 80px;
-    background: rgba(30, 42, 57, 0.8);
+    background: #1e2a39;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -29,9 +29,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
     /*float: right;*/
     width: 140px;
     height: 40px;
-    background: rgba(41, 52, 66, 1);
+    background: #1e2a39;
     box-sizing: border-box;
-    border: 2px solid rgba(22, 155, 213, 1);
+    border: 2px solid #169bd5;
     border-radius: 10px;
     line-height: 38px;
     text-align: center;
@@ -52,7 +52,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
 }
 
 .fco-gdpr-text-left a {
-    color: rgba(22, 155, 213, 1);
+    color: #169bd5;
 }
 
 /*熊哥组特殊处理*/

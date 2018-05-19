@@ -1,8 +1,7 @@
 import '../css/GDPR.css';
 import browser from '../common/browser';
 import langPackage from '../js/lang';
-import 'promise-polyfill/src/polyfill';
-import axios from 'axios-jsonp-pro';
+import ajax from '../../../common/ajax';
 import {getCookie, setCookie} from '../common/cookie';
 
 class GDPR {
@@ -125,8 +124,8 @@ class GDPR {
             gapr = document.getElementById('fco-gdpr');
 
         oBtn.onclick = function () {
-            let paramsString = "passport_jwt=" + this.loginKey;
-            let searchParams = new URLSearchParams(paramsString);
+            let paramsString = {"passport_jwt" : this.loginKey};
+            // let searchParams = new URLSearchParams(paramsString);
             if (this.forceBok) {
                 this.setCookie('fcogdpr_force_code', 0);
                 gapr.style.display = 'none';
@@ -135,7 +134,7 @@ class GDPR {
             }
 
             try {
-                axios.post('http://passport.oasgames.com/profile/policy-accept', searchParams).then(function () {
+                ajax.post('https://passport.oasgames.com/profile/policy-accept', paramsString,function () {
                     gapr.style.display = 'none';
                     gaprMask.style.display = 'none';
                     this.policy_acceptance = true;
@@ -173,7 +172,7 @@ class GDPR {
 
     noIntervalFire() {
         try {
-            axios.jsonp('http://passport.oasgames.com/index.php?m=getLoginUser').then(function (data) {
+            ajax.getJSON('https://passport.oasgames.com/index.php?m=getLoginUser',null,function (err,data) {
                 if (data.status === 'ok') {
                     if (data.val.policy_acceptance === false) {
                         this.loginKey = data.val.loginKey;
