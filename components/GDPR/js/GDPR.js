@@ -1,10 +1,9 @@
 import '../css/GDPR.css';
 import browser from '../common/browser';
 import langPackage from '../js/lang';
+import 'promise-polyfill/src/polyfill';
 import axios from 'axios-jsonp-pro';
 import {getCookie, setCookie} from '../common/cookie';
-import CustomEvent from 'custom-event';
-import 'babel-polyfill';
 
 class GDPR {
     constructor(data) {
@@ -22,6 +21,9 @@ class GDPR {
         this.policy_acceptance = '';
         this.getCookie = getCookie;
         this.setCookie = setCookie;
+        this.loginCallback = data.loginCallback || function () {
+            console.log('fcogdprfinished')
+        };
 
         if (GDPR.gdprBok === false) {
             if (this.defaultFireBok) {
@@ -140,6 +142,7 @@ class GDPR {
                 }.bind(this));
             }
             catch (e) {
+                console.error(e);
                 console.error('[FcoGDPR] passport policy accept error!!!');
             }
             finally {
@@ -165,8 +168,7 @@ class GDPR {
     }
 
     fcogdprfinished() {
-        let event = new CustomEvent('fcogdprfinished');
-        window.dispatchEvent(event);
+        this.loginCallback();
     }
 
     noIntervalFire() {
@@ -199,4 +201,4 @@ class GDPR {
 
 GDPR.gdprBok = false;
 
-export default GDPR;
+module.exports = GDPR;

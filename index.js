@@ -10,7 +10,10 @@ const gdpr = (data) => {
     return new GDPR(data);
 };
 
-exports = module.exports = {
-    FcoFooter: footer,
-    FcoGDPR: gdpr
-};
+if (typeof(fcoFooterConfig) !== 'undefined') {
+    footer(fcoFooterConfig);
+}
+
+if (typeof(fcoGDPRConfig) !== 'undefined') {
+    gdpr(fcoGDPRConfig);
+}

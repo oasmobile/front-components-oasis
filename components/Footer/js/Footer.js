@@ -1,7 +1,7 @@
 import '../css/footer.css';
 import langPackage from '../js/lang'
 
-export default class Footer {
+class Footer {
     constructor(data) {
         this.lang = data.lang || 'en';
         this.langContent = langPackage[this.lang];
@@ -27,6 +27,7 @@ export default class Footer {
             this.privacyHref = 'https://www.oasgames.com/privacy_control/PrivacyControl(EN).html '
         }
         this.priHrefFn();
+        this.fire(data.id);
     }
 
     _renderHtml() {
@@ -92,3 +93,5 @@ export default class Footer {
 
     }
 }
+
+module.exports = Footer;

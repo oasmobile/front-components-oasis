@@ -1,6 +1,4 @@
-import CustomEvent from 'custom-event';
-
-let head = document.head,
+let head = document.getElementsByTagName("head")[0],
     script = document.createElement('script'),
     ms = Math.floor(new Date().getTime() / 1000),
     msHourMod = ms % 3600,
@@ -21,13 +19,8 @@ script.async = true;
 script.src = fcoEnvUrl + '?' + 'timestamp=' + timestamp + version;
 script.setAttribute('id', 'fcoScript');
 
-script.onload = function () {
-    let event = new CustomEvent('fcoready');
-    window.dispatchEvent(event);
-};
+let fcoGdprBox = document.getElementById('fcoScript');
 
-let fcoGdprBox = document.querySelector('#fcoScript');
 if (!fcoGdprBox) {
     head.appendChild(script);
 }
-
