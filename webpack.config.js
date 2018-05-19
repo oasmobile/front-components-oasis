@@ -18,7 +18,11 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader?presets[]=es2015&compact=false'
+                loader: 'babel-loader?presets[]=es2015&compact=false',
+                plugins: [
+                    "transform-es3-property-literals",
+                    "transform-es3-member-expression-literals"
+                ]
             }, {
                 test: /\.css$/,
                 loader: 'style-loader',
