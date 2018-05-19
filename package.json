@@ -19,7 +19,6 @@
     },
     "homepage": "https://github.com/oasmobile/front-components-oasis#readme",
     "devDependencies": {
-        "ajax": "0.0.4",
         "babel": "^6.5.2",
         "babel-core": "^6.9.1",
         "babel-loader": "^6.2.4",

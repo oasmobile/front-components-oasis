@@ -88,7 +88,7 @@ exports.getJSON = function (url, params, cb) {
 
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        // script.async = true;
+        script.async = true;
         script.src = url;
         script.onload = cleanup;
         script.onerror = function (event) {
