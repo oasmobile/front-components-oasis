@@ -19,7 +19,6 @@
     },
     "homepage": "https://github.com/oasmobile/front-components-oasis#readme",
     "devDependencies": {
-        "axios-jsonp-pro": "^1.1.3",
         "babel": "^6.5.2",
         "babel-core": "^6.9.1",
         "babel-loader": "^6.2.4",
@@ -27,11 +26,9 @@
         "babel-plugin-transform-es3-property-literals": "^6.22.0",
         "babel-preset-es2015": "^6.9.0",
         "css-loader": "^0.23.1",
-        "custom-event": "^1.0.1",
         "es3ify-webpack-plugin": "0.0.1",
         "es5-sham-ie8": "^1.0.1",
         "es5-shim": "^4.5.10",
-        "promise-polyfill": "^7.1.2",
         "style-loader": "^0.13.1",
         "webpack": "^1.13.3"
     }
