@@ -3,6 +3,7 @@
  */
 
 const webpack = require('webpack');
+const es3ifyPlugin = require('es3ify-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -35,6 +36,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new es3ifyPlugin()
     ]
 };
