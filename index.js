@@ -17,3 +17,8 @@ if (typeof(fcoFooterConfig) !== 'undefined') {
 if (typeof(fcoGDPRConfig) !== 'undefined') {
     gdpr(fcoGDPRConfig);
 }
+
+exports = module.exports = {
+    FcoFooter: footer,
+    FcoGDPR: gdpr
+};

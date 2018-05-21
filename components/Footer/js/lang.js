@@ -44,7 +44,7 @@ const langPackage = {
         footer_forum: 'Forum',
         footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
         footer_notice: 'Alla omnämnda varumärken tillhör sina respektive ägare.',
-        footer_privacy: 'Privacy Control'
+        footer_privacy: 'Sekretessinställningar'
     },
     //俄语
     'ru': {
