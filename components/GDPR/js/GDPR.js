@@ -14,6 +14,8 @@ class GDPR {
         }
         this.browser = browser;
         this.forceBok = data.forceBok || false;
+
+        console.log(typeof(data.defaultFireBok) === 'undefined' ? true : data.defaultFireBok)
         this.defaultFireBok = typeof(data.defaultFireBok) === 'undefined' ? true : data.defaultFireBok;
         this.gameboxBok = data.gameboxBok || false;
         this.loginKey = '';
@@ -27,8 +29,6 @@ class GDPR {
         if (GDPR.gdprBok === false) {
             if (this.defaultFireBok) {
                 this.fire(true);
-            } else {
-                this.fire();
             }
         }
 
@@ -122,7 +122,6 @@ class GDPR {
         let oBtn = document.getElementById('gdpr-btn'),
             gaprMask = document.getElementById('fco-gdpr-mask'),
             gapr = document.getElementById('fco-gdpr');
-
         oBtn.onclick = function () {
             let paramsString = {"passport_jwt" : this.loginKey};
             // let searchParams = new URLSearchParams(paramsString);
@@ -132,8 +131,8 @@ class GDPR {
                 gaprMask.style.display = 'none';
                 return false;
             }
-
             try {
+
                 ajax.post('//passport.oasgames.com/profile/policy-accept', paramsString,function () {
                     gapr.style.display = 'none';
                     gaprMask.style.display = 'none';
