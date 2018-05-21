@@ -2,9 +2,12 @@
  * Created by user on 16/6/2.
  */
 
+const webpack = require('webpack');
+const es3ifyPlugin = require('es3ify-webpack-plugin');
+
 module.exports = {
-    entry:{
-        runtime:'./index.js',
+    entry: {
+        runtime: './index.js',
         loader: './loader.js',
     },
     output: {
@@ -16,7 +19,11 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader?presets[]=es2015&compact=false'
+                loader: 'babel-loader?presets[]=es2015&compact=false',
+                plugins: [
+                    "transform-es3-property-literals",
+                    "transform-es3-member-expression-literals"
+                ]
             }, {
                 test: /\.css$/,
                 loader: 'style-loader',
@@ -25,5 +32,11 @@ module.exports = {
                 loader: 'css-loader',
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),
+        new es3ifyPlugin()
+    ]
 };
