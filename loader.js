@@ -4,7 +4,7 @@ let head = document.getElementsByTagName("head")[0],
     msHourMod = ms % 3600,
     timestamp = msHourMod === 0 ? ms : ms - msHourMod,
     version = '',
-    fcoEnvUrl = 'https://img.oasgames.com/fc-oasis/runtime.min.js';
+    fcoEnvUrl = '//img.oasgames.com/fc-oasis/runtime.min.js';
 
 if (typeof(fcoUrl) !== 'undefined') {
     fcoEnvUrl = fcoUrl;

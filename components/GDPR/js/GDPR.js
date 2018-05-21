@@ -41,7 +41,7 @@ class GDPR {
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" >
                                 <tr>
                                     <td class="fco-gdpr-text-left" align="middle">${this.langPackage.gdpr_text}</td>
-                                    <td><a href="javascript:;" class="fco-gdpr-btn" id="gdpr-btn">${this.langPackage.gdpr_btn}</a></td>
+                                    <td class="fco-gdpr-text-right"><a href="javascript:;" class="fco-gdpr-btn" id="gdpr-btn">${this.langPackage.gdpr_btn}</a></td>
                                 </tr>
                             </table>
                         </div>
@@ -134,7 +134,7 @@ class GDPR {
             }
 
             try {
-                ajax.post('https://passport.oasgames.com/profile/policy-accept', paramsString,function () {
+                ajax.post('//passport.oasgames.com/profile/policy-accept', paramsString,function () {
                     gapr.style.display = 'none';
                     gaprMask.style.display = 'none';
                     this.policy_acceptance = true;
@@ -172,7 +172,7 @@ class GDPR {
 
     noIntervalFire() {
         try {
-            ajax.getJSON('https://passport.oasgames.com/index.php?m=getLoginUser',null,function (err,data) {
+            ajax.getJSON('//passport.oasgames.com/index.php?m=getLoginUser',null,function (err,data) {
                 if (data.status === 'ok') {
                     if (data.val.policy_acceptance === false) {
                         this.loginKey = data.val.loginKey;
