@@ -9,6 +9,11 @@
         * {
             margin: 0;
             padding: 0;
+
+        }
+
+        body {
+            height: 100px;
         }
     </style>
 </head>
@@ -16,26 +21,25 @@
 <div id="footer">
 
 </div>
-<!--<div id="gdpr">-->
 
-<!--</div>-->
-
-<!--<script src="dist/scripts/test.min.js"></script>-->
 <script>
-    var fcoVersion = '122ssss';
+    var fcoUrl = 'dist/scripts/runtime.min.js';
 </script>
 <script type="text/javascript" src="dist/scripts/loader.min.js"></script>
 
 <script>
-    window.addEventListener('fcoready', function () {
-        FcoFooter({
-            lang: 'en',
-            'forumBok': true,
-        }).fire('footer');
-        FcoGDPR({
-            lang: 'zh'
-        });
-    });
+
+
+    var fcoFooterConfig = {
+        lang :'el',
+        forumBok:true,
+        id:'footer'
+    }
+    var fcoGDPRConfig = {
+        lang: 'ar',
+        forumBok: true,
+        id: 'footer'
+    }
 </script>
 </body>
 </html>

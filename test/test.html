@@ -19,13 +19,23 @@
 
 <!--<script src="dist/scripts/test.min.js"></script>-->
 <script>
-    var fcoVersion = '2ss2222';
+    var fcoVersion = '22222';
 </script>
-<script type="text/javascript" src="https://img.oasgames.com/fc-oasis/v2.0.0.4/loader.min.js"></script>
+<script type="text/javascript" src="https://img.oasgames.com/fc-oasis/v2.0.0.8/loader.min.js"></script>
 <script>
-    window.addEventListener('fcoready', function () {
+    function myAddEvent(obj, ev, fn)    //obj为要绑定事件的元素，ev为要绑定的事件，fn为绑定事件的函数
+    {
+        if (obj.attachEvent) {
+            obj.attachEvent( ev, fn);
+        }
+        else {
+            obj.addEventListener(ev, fn, false);
+        }
+    }
+
+    myAddEvent(window,'fcoready', function () {
         FcoFooter({
-            lang: 'en',
+            lang: 'zh',
             'forumBok': true,
         }).fire('footer');
         FcoGDPR({

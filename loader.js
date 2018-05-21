@@ -1,29 +1,26 @@
-let head = document.head,
+let head = document.getElementsByTagName("head")[0],
     script = document.createElement('script'),
     ms = Math.floor(new Date().getTime() / 1000),
     msHourMod = ms % 3600,
     timestamp = msHourMod === 0 ? ms : ms - msHourMod,
     version = '',
-    fcoEnvUrl = 'https://img.oasgames.com/fc-oasis/runtime.min.js';
+    fcoEnvUrl = '//img.oasgames.com/fc-oasis/runtime.min.js';
+
+if (typeof(fcoUrl) !== 'undefined') {
+    fcoEnvUrl = fcoUrl;
+}
 
 if (typeof(fcoVersion) !== 'undefined') {
     version = '&version=' + fcoVersion;
 }
 
-if (typeof(fcoEnv) !== 'undefined' && fcoEnv === 'dev') {
-    fcoEnvUrl = 'dist/scripts/runtime.min.js';
-}
-
-script.src = fcoEnvUrl + '?' + 'timestamp=' + timestamp + version;
 script.type = 'text/javascript';
-script.setAttribute('id','fcoScript');
-script.onload = function () {
-    let event = new CustomEvent('fcoready');
-    window.dispatchEvent(event);
-};
+script.async = true;
+script.src = fcoEnvUrl + '?' + 'timestamp=' + timestamp + version;
+script.setAttribute('id', 'fcoScript');
 
-let fcoGdprBox = document.querySelector('#fcoScript');
-if(!fcoGdprBox){
+let fcoGdprBox = document.getElementById('fcoScript');
+
+if (!fcoGdprBox) {
     head.appendChild(script);
 }
-
