@@ -39,8 +39,8 @@ const langPackage = {
     //瑞典
     'sv': {
         footer_abus: 'Om oss',
-        footer_pri: 'Integritetspolicy',
-        footer_term_ser: 'Användarvillkor',
+        footer_pri: 'användarvillkoren',
+        footer_term_ser: 'säkerhetspolicyn',
         footer_forum: 'Forum',
         footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
         footer_notice: 'Alla omnämnda varumärken tillhör sina respektive ägare.',
@@ -59,8 +59,8 @@ const langPackage = {
     //葡萄牙
     'pt': {
         footer_abus:'Sobre nós',
-        footer_pri:'Política de Privacidade',
-        footer_term_ser:'Termos de Serviço',
+        footer_pri:'Termos de Uso',
+        footer_term_ser:'Privacidade',
         footer_forum:'Fórum',
         footer_his:'OASIS GAMES LIMITED. Todos os direitos resevados.',
         footer_notice:'As marcas registradas são propriedade de seus respectivos proprietários.',
@@ -69,8 +69,8 @@ const langPackage = {
     //波兰
     'pl': {
         footer_abus:'O nas',
-        footer_pri:'Polityka prywatności',
-        footer_term_ser:'Warunki korzystania z usług',
+        footer_pri:'Umowę użytkownika',
+        footer_term_ser:'Politykę prywatności',
         footer_forum:'Forum',
         footer_his:'OASIS GAMES Spółka z o.o. Wszystkie prawa zastrzeżone.',
         footer_notice:'Wszystkie wykorzystywane znaki handlowe są własnością ich właścicieli.',
@@ -79,8 +79,8 @@ const langPackage = {
     //荷兰
     'nl': {
         footer_abus:'Over ons',
-        footer_pri:'Privacybeleid',
-        footer_term_ser:'Servicevoorwaarden',
+        footer_pri:'Voorwaarden',
+        footer_term_ser:'Privacybeleid',
         footer_forum:'Forum',
         footer_his:'OASIS GAMES LIMITED.Auteursrechten voorbehouden',
         footer_notice:'Alle onderhavige handelsmerken zijn eigendom van hun betreffende eigenaars',
@@ -89,8 +89,8 @@ const langPackage = {
     //意大利
     'it': {
         footer_abus:'Su di noi',
-        footer_pri:'Informativa sulla privacy',
-        footer_term_ser:'Termini di servizio',
+        footer_pri:'termini di servizio',
+        footer_term_ser:'normativa sulla privacy',
         footer_forum:'Forum',
         footer_his:'OASIS GAMES LIMITED. Tutti i diritti riservati.',
         footer_notice:'Tutti i marchi registrati appartengono ai rispettivi proprietari.',
@@ -99,8 +99,8 @@ const langPackage = {
     //法语
     'fr': {
         footer_abus:"À propos",
-        footer_pri:"Règles de confidentialité",
-        footer_term_ser:"Conditions de service",
+        footer_pri:"Clause d'Utilisateur",
+        footer_term_ser:"Confidentialité",
         footer_forum:"Forum",
         footer_his:"OASIS GAMES LIMITED. Tous droits réservés.",
         footer_notice:"Toutes les marques référées sont la propriété de leurs propriétaires respectifs.",
@@ -109,8 +109,8 @@ const langPackage = {
     //希腊
     'el': {
         footer_abus: 'Σχετικά με μας',
-        footer_pri: 'Πολιτική απορρήτου',
-        footer_term_ser: 'Όροι υπηρεσίας',
+        footer_pri: 'όρους παροχής υπηρεσιών',
+        footer_term_ser: 'πολιτική απορρήτου',
         footer_forum: 'Φόρουμ',
         footer_his: 'OASIS GAMES LIMITED. All rights reserved.',
         footer_notice: 'Τα εμπ. σήματα που αναφ. στο παρόν είναι ιδιοκτ. των αντίστ. ιδιοκτ. τους.',
@@ -119,8 +119,8 @@ const langPackage = {
     //德语
     'de': {
         footer_abus: 'Über uns',
-        footer_pri: 'Datenschutzrichtlinien',
-        footer_term_ser: 'Nutzungsbedingungen',
+        footer_pri: 'Nutzungs',
+        footer_term_ser: 'Privatsphärerichtlinien',
         footer_forum: 'Forum',
         footer_his: 'OASIS GAMES LIMITED. Alle Rechte vorbehalten.',
         footer_notice: 'Alle hier verwendeten Markenzeichen sind das Eigentum ihrer Besitzer.',
@@ -139,8 +139,8 @@ const langPackage = {
     //西班牙
     'es': {
         footer_abus: 'Sobre Nosotros',
-        footer_pri: 'Política de Privacidad',
-        footer_term_ser: 'Términos de Servicio',
+        footer_pri: 'Acuerdo de Usuario',
+        footer_term_ser: 'Política de Privacidad',
         footer_forum: 'Foro',
         footer_his: 'OASIS GAMES LIMITED. Todos los derechos reservados.',
         footer_notice: 'La marcas registradas referenciadas son propiedad de sus respectivos dueños.',
