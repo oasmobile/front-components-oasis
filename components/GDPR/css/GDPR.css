@@ -4,7 +4,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
     padding: 0;
 }
 .fco-gdpr-box {
-    height: 80px;
+    height: 100px;
     background: #1e2a39;
     position: fixed;
     bottom: 0;
@@ -12,6 +12,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
     width: 100%;
     z-index: 5000;
     overflow-x: auto;
+    filter: Alpha(opacity=95); /* IE */
+    -moz-opacity: 0.95; /* FF 主要是为了兼容老版本的FF */
+    opacity: 0.95; /* FF */
 }
 
 .fco-gdpr-text {
@@ -22,7 +25,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
 }
 
 .fco-gdpr-text table {
-    height: 80px;
+    height: 100px;
 }
 
 .fco-gdpr-btn {
@@ -59,10 +62,12 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
     height: 362px;
     background: #1e2a39;
     width: 608px;
-    opacity: 0.8;
     position: absolute;
     top: 0;
     z-index: 5000;
+    filter: Alpha(opacity=95); /* IE */
+    -moz-opacity: 0.95; /* FF 主要是为了兼容老版本的FF */
+    opacity: 0.95; /* FF */
 }
 
 .fco-gdpr-tpl-text {

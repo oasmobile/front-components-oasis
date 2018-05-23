@@ -14,8 +14,6 @@ class GDPR {
         }
         this.browser = browser;
         this.forceBok = data.forceBok || false;
-
-        console.log(typeof(data.defaultFireBok) === 'undefined' ? true : data.defaultFireBok)
         this.defaultFireBok = typeof(data.defaultFireBok) === 'undefined' ? true : data.defaultFireBok;
         this.gameboxBok = data.gameboxBok || false;
         this.loginKey = '';
@@ -23,7 +21,6 @@ class GDPR {
         this.getCookie = getCookie;
         this.setCookie = setCookie;
         this.loginCallback = data.loginCallback || function () {
-            console.log('fcogdprfinished')
         };
 
         if (GDPR.gdprBok === false) {
@@ -72,7 +69,6 @@ class GDPR {
 
             if (bok) {
                 this.time = setInterval(function () {
-                    console.log(this.getCookie('oas_user'));
                     if (this.getCookie('oas_user')) {
                         clearInterval(this.time);
                         this.noIntervalFire();
