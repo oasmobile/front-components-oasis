@@ -14,8 +14,8 @@ class Footer {
         this.year = this.date.getFullYear();
         this.options = data.options  ||  '';
         this.langToCase = this.lang.toLocaleUpperCase();
-        this.logoOasgame = data.logoOasgame  ||  `//${this.lang}.oasgames.com`;
-        this.oasgame = 'oasgames.com/en';
+        this.logoOasgame = data.logoOasgame  ||  `http://${this.lang}.oasgames.com`;
+        this.oasgame = 'oasgames.com/pc/en';
         this.priHref = data.priHref  ||  `//www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.termSerHref = data.termSerHref  ||  `//www.oasgames.com/TermsofService(${this.langToCase}).html`;
         this.forumHref = data.forumHref  ||  `//${this.langToCase}.forum.oasgames.com`;
@@ -23,10 +23,6 @@ class Footer {
         this.fLogo = '//img.oasgames.com/upload/1505731497.png';
         this.logoMarginT = '0';
         this.forumBok = data.forumBok  ||  false;
-        if(this.langToCase !== 'ZH'){
-            this.privacyHref = '//www.oasgames.com/privacy_control/PrivacyControl(EN).html '
-        }
-        this.priHrefFn();
         this.fire(data.id);
     }
 
@@ -66,12 +62,13 @@ class Footer {
         if (this.lang === 'zh') {
             this.fLogo = '//img.oasgames.com/upload/1505731532.png';
             this.logoMarginT = '7px';
-            this.oasgame = 'oasgames.com/zh';
+            this.oasgame = 'oasgames.com/pc/zh';
             this.priHref = '//www.oasgames.com/PrivacyPolicy(EN).html';
             this.termSerHref = '//www.oasgames.com/TermsofService(EN).html';
+            this.privacyHref = '//www.oasgames.com/privacy_control/PrivacyControl(EN).html';
         }
         else if (this.lang === 'tw') {
-            this.oasgame = 'oasgames.com/zh';
+            this.oasgame = 'oasgames.com/pc/zh';
         }
     }
 
@@ -83,15 +80,6 @@ class Footer {
         }
     }
 
-    priHrefFn(){
-        this.priArr = ['EN','FR','IT','PL','ZH'];
-        for (let i = 0; i < this.priArr.length; i++) {
-            if (this.langToCase !== this.priArr[i]) {
-                this.priHref = "//www.oasgames.com/PrivacyPolicy(EN).html";
-            }
-        }
-
-    }
 }
 
 module.exports = Footer;
