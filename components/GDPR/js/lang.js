@@ -1,6 +1,6 @@
 const langPackage = {
     'zh': {
-        "gdpr_text": '为了更好的保证您的个人隐私安全，我们对隐私协议进行了完善，请点击<a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">这里</a>查看。',
+        "gdpr_text": '为了更好的保证您的个人隐私安全，我们对隐私协议进行了完善，请点击<a href="//www.oasgames.com/PrivacyPolicy(ZH).html" target="_blank">这里</a>查看。',
         "gdpr_btn": '确认'
     },
     'en': {
@@ -8,23 +8,23 @@ const langPackage = {
         "gdpr_btn": 'Confirm'
     },
     'tw': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">here</a> to view it.',
+        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(TW).html" target="_blank">here</a> to view it.',
         "gdpr_btn": 'Confirm'
     },
     'tr': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">here</a> to view it.',
+        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(TR).html" target="_blank">here</a> to view it.',
         "gdpr_btn": 'Confirm'
     },
     'sv': {
-        "gdpr_text": 'Vi har uppdaterat vår sekretesspolicy för att skydda uppgifter om dig bättre. Klicka <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">här</a> för mer info',
+        "gdpr_text": 'Vi har uppdaterat vår sekretesspolicy för att skydda uppgifter om dig bättre. Klicka <a href="//www.oasgames.com/PrivacyPolicy(SV).html" target="_blank">här</a> för mer info',
         "gdpr_btn": 'Godkänn'
     },
     'ru': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">here</a> to view it.',
+        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(RU).html" target="_blank">here</a> to view it.',
         "gdpr_btn": 'Confirm'
     },
     'pt': {
-        "gdpr_text": 'Para melhor proteger sua privacidade, modificamos nossa política de privacidade, clique <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">aqui</a> para visualizá-la.',
+        "gdpr_text": 'Para melhor proteger sua privacidade, modificamos nossa política de privacidade, clique <a href="//www.oasgames.com/PrivacyPolicy(PT).html" target="_blank">aqui</a> para visualizá-la.',
         "gdpr_btn": 'Confirmar'
     },
     'pl': {
@@ -32,7 +32,7 @@ const langPackage = {
         "gdpr_btn": 'Zaakceptuj'
     },
     'nl': {
-        "gdpr_text": 'Om uw privacy beter te beschermen, hebben we ons privacybeleid aangepast. Klik <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">hier</a> om te bekijken.',
+        "gdpr_text": 'Om uw privacy beter te beschermen, hebben we ons privacybeleid aangepast. Klik <a href="//www.oasgames.com/PrivacyPolicy(NL).html" target="_blank">hier</a> om te bekijken.',
         "gdpr_btn": 'Bevestigen'
     },
     'it': {
@@ -44,32 +44,32 @@ const langPackage = {
         "gdpr_btn": 'Confirmer'
     },
     'el': {
-        "gdpr_text": 'Για την καλύτερη προστασία της ιδιωτικής ζωής σας, έχουμε αλλάξει την πολιτική απορρήτου, κάντε κλικ <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">εδώ</a> για να την δείτε.',
+        "gdpr_text": 'Για την καλύτερη προστασία της ιδιωτικής ζωής σας, έχουμε αλλάξει την πολιτική απορρήτου, κάντε κλικ <a href="//www.oasgames.com/PrivacyPolicy(EL).html" target="_blank">εδώ</a> για να την δείτε.',
         "gdpr_btn": 'Επιβεβαίωση'
     },
     'de': {
-        "gdpr_text": 'Um die Sicherheit deiner privaten Informationen besser zu schützen, haben wir die Privatsphärerichtlinien angepasst. Klicke <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">hier</a>, um sie dir anzusehen.',
+        "gdpr_text": 'Um die Sicherheit deiner privaten Informationen besser zu schützen, haben wir die Privatsphärerichtlinien angepasst. Klicke <a href="//www.oasgames.com/PrivacyPolicy(DE).html" target="_blank">hier</a>, um sie dir anzusehen.',
         "gdpr_btn": 'Okay'
     },
     'ar': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">here</a> to view it.',
+        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(AR).html" target="_blank">here</a> to view it.',
         "gdpr_btn": 'Confirm'
     },
     'es': {
-        "gdpr_text": 'Para garantizar una mejor seguridad de su privacidad, hemos modificado nuestro acuerdo de privacidad. Haga clic <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">aquí</a> para ver.',
+        "gdpr_text": 'Para garantizar una mejor seguridad de su privacidad, hemos modificado nuestro acuerdo de privacidad. Haga clic <a href="//www.oasgames.com/PrivacyPolicy(ES).html" target="_blank">aquí</a> para ver.',
         "gdpr_btn": 'Confirmar'
     },
     'ja': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">here</a> to view it.',
+        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(JA).html" target="_blank">here</a> to view it.',
         "gdpr_btn": 'Confirm'
     },
     'th': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">here</a> to view it.',
+        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(TH).html" target="_blank">here</a> to view it.',
         "gdpr_btn": 'Confirm'
     },
     //越南语
     'vi': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(EN).html" target="_blank">here</a> to view it.',
+        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(VI).html" target="_blank">here</a> to view it.',
         "gdpr_btn": 'Confirm'
     }
 };
