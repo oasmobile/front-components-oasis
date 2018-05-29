@@ -21,14 +21,11 @@ class GDPR {
         this.getCookie = getCookie;
         this.setCookie = setCookie;
         this.loginCallback = data.loginCallback || function () {
-            console.log('fcogdprfinished')
         };
 
         if (GDPR.gdprBok === false) {
             if (this.defaultFireBok) {
                 this.fire(true);
-            } else {
-                this.fire();
             }
         }
 
@@ -72,7 +69,6 @@ class GDPR {
 
             if (bok) {
                 this.time = setInterval(function () {
-                    console.log(this.getCookie('oas_user'));
                     if (this.getCookie('oas_user')) {
                         clearInterval(this.time);
                         this.noIntervalFire();
@@ -122,7 +118,6 @@ class GDPR {
         let oBtn = document.getElementById('gdpr-btn'),
             gaprMask = document.getElementById('fco-gdpr-mask'),
             gapr = document.getElementById('fco-gdpr');
-
         oBtn.onclick = function () {
             let paramsString = {"passport_jwt" : this.loginKey};
             // let searchParams = new URLSearchParams(paramsString);
@@ -132,8 +127,8 @@ class GDPR {
                 gaprMask.style.display = 'none';
                 return false;
             }
-
             try {
+
                 ajax.post('//passport.oasgames.com/profile/policy-accept', paramsString,function () {
                     gapr.style.display = 'none';
                     gaprMask.style.display = 'none';

@@ -24,6 +24,7 @@
 
 <script>
     var fcoUrl = 'dist/scripts/runtime.min.js';
+    var fcoVersion = '123';
 </script>
 <script type="text/javascript" src="dist/scripts/loader.min.js"></script>
 
@@ -31,15 +32,22 @@
 
 
     var fcoFooterConfig = {
-        lang :'el',
+        lang :'sv',
         forumBok:true,
         id:'footer'
     }
-    var fcoGDPRConfig = {
-        lang: 'ar',
-        forumBok: true,
-        id: 'footer'
+    document.querySelector('#footer').onclick = function () {
+        FcoGDPR({
+            lang: 'en',
+            defaultFireBok: false,
+            loginCallback: function(){
+                alert(45263)
+            }
+        }).fire();
     }
+    // var fcoGDPRConfig = {
+    //     lang: 'en'
+    // }
 </script>
 </body>
 </html>
