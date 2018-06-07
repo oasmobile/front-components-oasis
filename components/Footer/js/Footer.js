@@ -1,5 +1,6 @@
 import '../css/footer.css';
-import langPackage from '../js/lang'
+import langPackage from '../js/lang';
+import browser from '../../GDPR/common/browser';
 
 class Footer {
     constructor(data) {
@@ -10,7 +11,9 @@ class Footer {
             this.langContent = langPackage[this.lang];
         }
         this.from = data.from  ||  '';
+        this.footerBottomLang = this.lang;
         this.date = new Date;
+        this.browser = browser;
         this.year = this.date.getFullYear();
         this.options = data.options  ||  '';
         this.langToCase = this.lang.toLocaleUpperCase();
@@ -49,7 +52,33 @@ class Footer {
                                 </div>
                             </div>
                         </div>`;
+        // this.wapContent = `<div id="fco-wap-footerwrap" class="fco-wap-footerwrap">
+        //     <div class="fco-wap-footerwrap-con">
+        //          <img src="//img.oasgames.com/upload/1527834447/img/logo_bottom_${this.footerBottomLang}.png" alt="">
+        //         <div class="footer-wap-href">
+        //             <a target="_blank" href="//${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a> |
+        //             <a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a> |
+        //             <a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a> |
+        //             <a target="_blank" href="${this.privacyHref}">${this.langContent.footer_privacy}</a>
+        //             ${this.forumContent}
+        //         </div>
+        //         <p>©2012-${this.year} ${this.langContent.footer_his}</p>
+        //         <p>${this.langContent.footer_notice}</p>
+        //     </div>
+        //
+        // </div>`;
+        //
+        // //检测设备
+        // if (this.browser.versions.mobile || this.browser.versions.ios || this.browser.versions.android ||
+        //     this.browser.versions.iPhone || this.browser.versions.iPad) {
+        //     //wap
+        //     return this.wapContent;
+        // } else {
+        //     //web
+        //     return this.content;
+        // }
         return this.content;
+
     }
 
     fire(id) {
@@ -60,6 +89,7 @@ class Footer {
 
     zhHtml() {
         if (this.lang === 'zh') {
+
             this.fLogo = '//img.oasgames.com/upload/1505731532.png';
             this.logoMarginT = '7px';
             this.oasgame = 'oasgames.com/pc/zh';
@@ -67,7 +97,9 @@ class Footer {
             this.termSerHref = '//www.oasgames.com/TermsofService(EN).html';
             this.privacyHref = '//www.oasgames.com/privacy_control/PrivacyControl(EN).html';
         }
-        else if (this.lang === 'tw') {
+        else{
+            this.footerBottomLang = 'en';
+        } if (this.lang === 'tw') {
             this.oasgame = 'oasgames.com/pc/zh';
         }
     }

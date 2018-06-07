@@ -30,24 +30,19 @@
 
 <script>
 
+    var aaa = {
 
+    }
     var fcoFooterConfig = {
         lang :'sv',
         forumBok:true,
         id:'footer'
     }
-    document.querySelector('#footer').onclick = function () {
-        FcoGDPR({
-            lang: 'en',
-            defaultFireBok: false,
-            loginCallback: function(){
-                alert(45263)
-            }
-        }).fire();
+
+    var fcoGDPRConfig = {
+        lang: 'en',
+        forceBok:true
     }
-    // var fcoGDPRConfig = {
-    //     lang: 'en'
-    // }
 </script>
 </body>
 </html>
