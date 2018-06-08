@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "NODE_ENV=development webpack -d --progress --colors --watch",
         "test": "NODE_ENV=test webpack -d --progress --colors",
-        "publish": "NODE_ENV=production webpack -p --progress --colors"
+        "publish": "NODE_ENV=production webpack --progress --colors"
     },
     "repository": {
         "type": "git",
