@@ -52,32 +52,31 @@ class Footer {
                                 </div>
                             </div>
                         </div>`;
-        // this.wapContent = `<div id="fco-wap-footerwrap" class="fco-wap-footerwrap">
-        //     <div class="fco-wap-footerwrap-con">
-        //          <img src="//img.oasgames.com/upload/1527834447/img/logo_bottom_${this.footerBottomLang}.png" alt="">
-        //         <div class="footer-wap-href">
-        //             <a target="_blank" href="//${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a> |
-        //             <a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a> |
-        //             <a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a> |
-        //             <a target="_blank" href="${this.privacyHref}">${this.langContent.footer_privacy}</a>
-        //             ${this.forumContent}
-        //         </div>
-        //         <p>©2012-${this.year} ${this.langContent.footer_his}</p>
-        //         <p>${this.langContent.footer_notice}</p>
-        //     </div>
-        //
-        // </div>`;
-        //
-        // //检测设备
-        // if (this.browser.versions.mobile || this.browser.versions.ios || this.browser.versions.android ||
-        //     this.browser.versions.iPhone || this.browser.versions.iPad) {
-        //     //wap
-        //     return this.wapContent;
-        // } else {
-        //     //web
-        //     return this.content;
-        // }
-        return this.content;
+        this.wapContent = `<div id="fco-wap-footerwrap" class="fco-wap-footerwrap">
+            <div class="fco-wap-footerwrap-con">
+                 <img src="//img.oasgames.com/upload/1527834447/img/logo_bottom_${this.footerBottomLang}.png" alt="">
+                <div class="footer-wap-href">
+                    <a target="_blank" href="//${this.oasgame}/company.html" rel="nofollow">${this.langContent.footer_abus}</a> |
+                    <a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a> |
+                    <a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a> |
+                    <a target="_blank" href="${this.privacyHref}">${this.langContent.footer_privacy}</a>
+                    ${this.forumContent}
+                </div>
+                <p>©2012-${this.year} ${this.langContent.footer_his}</p>
+                <p>${this.langContent.footer_notice}</p>
+            </div>
+
+        </div>`;
+
+        //检测设备
+        if (this.browser.versions.mobile || this.browser.versions.ios || this.browser.versions.android ||
+            this.browser.versions.iPhone || this.browser.versions.iPad) {
+            //wap
+            return this.wapContent;
+        } else {
+            //web
+            return this.content;
+        }
 
     }
 
@@ -85,6 +84,22 @@ class Footer {
         let rootElement = document.getElementById(id);
         this.zhHtml();
         rootElement.innerHTML = this._renderHtml();
+
+        let oA = document.querySelectorAll('.fco-wap-footerwrap a');
+        if(oA){
+            for (let i = 0; i < oA.length; i++) {
+                oA[i].addEventListener('touchstart', function () {
+                    this.className = 'active';
+                });
+                oA[i].addEventListener('touchend', function () {
+                    for (let i = 0; i < oA.length; i++) {
+                        oA[i].className = '';
+                    }
+                })
+            }
+        }
+
+
     }
 
     zhHtml() {
