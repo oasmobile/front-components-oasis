@@ -18,4 +18,4 @@ function setCookie(name, value) {
     document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
 }
 
-export {getCookie, setCookie};
+module.exports = {getCookie, setCookie};

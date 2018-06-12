@@ -4,6 +4,31 @@
 
 const webpack = require('webpack');
 const es3ifyPlugin = require('es3ify-webpack-plugin');
+let env = JSON.stringify(process.env.NODE_ENV);
+let plugins = [
+    new webpack.DefinePlugin({
+        'NODE_ENV': env
+    }),
+    new es3ifyPlugin()
+];
+
+if (env === '"production"') {
+    plugins = [
+        new webpack.DefinePlugin({
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {screw_ie8: false},
+            output: {screw_ie8: false},
+            mangle: {
+                screw_ie8: false
+            },
+            support_ie8: true
+
+        }),
+        new es3ifyPlugin()
+    ];
+}
 
 module.exports = {
     entry: {
@@ -33,10 +58,5 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new webpack.DefinePlugin({
-            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        }),
-        new es3ifyPlugin()
-    ]
+    plugins: plugins
 };
