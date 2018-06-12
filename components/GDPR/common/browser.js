@@ -18,4 +18,4 @@ const browser = {
     }(),
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
 };
-export default browser;
+module.exports = browser;

@@ -9,7 +9,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
 .fco-footer-fr {  float: right;  }
 /*footer*/
 #fco-footer-footwrap {  font-family: Arial, Helvetica, sans-serif;  width: 100%;  margin: 0 auto; background: #000; }
-#fco-footer-footBox {  margin: 0 auto;  height: auto;  }
+#fco-footer-footBox {  margin: 0 auto;  height: auto; width:600px;  }
 #fco-footer-foot {  font-size: 13px;  height: 87px;  line-height: 16px;  width: auto; min-width: 608px; padding-top: 13px;  overflow: hidden;  color: #979797;  }
 .fco-footer-bottext {  display: inline;  font-size: 13px;  height: 55px;  line-height: 20px;  margin-top: 6px;  padding-left: 20px;  }
 .fco-footer-bottext a:link, .fco-footer-bottext a:visited {  font-size: 13px;  text-decoration: none;  color: #979797;  }
@@ -17,3 +17,41 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
 #fco-footer-footwrap a {  cursor: pointer;  background-color: transparent;  }
 .fco-footer-logo {  text-align: center;  margin-left: 10px;  }
 .fco-footer-marginAuto {  margin: 0 auto;  }
+
+/*wap footer*/
+.fco-wap-footerwrap{
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+    color: #b8b6b4;
+    zoom: 1;
+}
+.fco-wap-footerwrap-con{
+    padding: 0 3vw 5vw;
+    text-align: center;
+    font-size: 3.4vw;
+}
+.fco-wap-footerwrap img{
+    width: 46vw;
+    margin: 0 auto;
+    display: block;
+    padding: 4vw 0;
+}
+.footer-wap-href{
+    line-height: 7vw;
+}
+.fco-wap-footerwrap a{
+    color: #b8b6b4;
+    text-decoration: none;
+    font-size: 3.8vw;
+    line-height: 4.2vw;
+}
+
+.fco-wap-footerwrap a.active{
+    text-decoration: underline;
+}
+
+.fco-wap-footerwrap p{
+    margin-top: 1.5vw;
+}
