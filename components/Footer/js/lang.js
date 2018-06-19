@@ -178,4 +178,4 @@ const langPackage = {
     }
 };
 
-module.exports = langPackage;
+export default langPackage;

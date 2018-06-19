@@ -85,8 +85,9 @@ class Footer {
         this.zhHtml();
         rootElement.innerHTML = this._renderHtml();
 
-        let oA = document.querySelectorAll('.fco-wap-footerwrap a');
-        if(oA){
+        let oFoot = document.getElementById('fco-wap-footerwrap');
+        if(oFoot){
+            let oA = oFoot.getElementsByTagName('a');
             for (let i = 0; i < oA.length; i++) {
                 oA[i].addEventListener('touchstart', function () {
                     this.className = 'active';
@@ -98,8 +99,6 @@ class Footer {
                 })
             }
         }
-
-
     }
 
     zhHtml() {
@@ -129,4 +128,4 @@ class Footer {
 
 }
 
-module.exports = Footer;
+export default Footer;
