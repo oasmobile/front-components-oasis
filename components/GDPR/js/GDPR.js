@@ -195,4 +195,4 @@ class GDPR {
 
 GDPR.gdprBok = false;
 
-module.exports = GDPR;
+export default GDPR;

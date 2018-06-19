@@ -17,11 +17,11 @@ class Footer {
         this.year = this.date.getFullYear();
         this.options = data.options  ||  '';
         this.langToCase = this.lang.toLocaleUpperCase();
-        this.logoOasgame = data.logoOasgame  ||  `http://${this.lang}.oasgames.com`;
+        this.logoOasgame = data.logoOasgame  ||  `//${this.lang}.oasgames.com`;
         this.oasgame = 'oasgames.com/pc/en';
         this.priHref = data.priHref  ||  `//www.oasgames.com/PrivacyPolicy(${this.langToCase}).html`;
         this.termSerHref = data.termSerHref  ||  `//www.oasgames.com/TermsofService(${this.langToCase}).html`;
-        this.forumHref = data.forumHref  ||  `//${this.langToCase}.forum.oasgames.com`;
+        this.forumHref = data.forumHref  ||  `http://${this.langToCase}.forum.oasgames.com`;
         this.privacyHref = data.privacyHref  ||  `//www.oasgames.com/privacy_control/PrivacyControl(${this.langToCase}).html `;
         this.fLogo = '//img.oasgames.com/upload/1505731497.png';
         this.logoMarginT = '0';
@@ -85,8 +85,9 @@ class Footer {
         this.zhHtml();
         rootElement.innerHTML = this._renderHtml();
 
-        let oA = document.querySelectorAll('.fco-wap-footerwrap a');
-        if(oA){
+        let oFoot = document.getElementById('fco-wap-footerwrap');
+        if(oFoot){
+            let oA = oFoot.getElementsByTagName('a');
             for (let i = 0; i < oA.length; i++) {
                 oA[i].addEventListener('touchstart', function () {
                     this.className = 'active';
@@ -98,8 +99,6 @@ class Footer {
                 })
             }
         }
-
-
     }
 
     zhHtml() {
@@ -129,4 +128,4 @@ class Footer {
 
 }
 
-module.exports = Footer;
+export default Footer;
