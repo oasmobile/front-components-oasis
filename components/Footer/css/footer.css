@@ -9,7 +9,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
 .fco-footer-fr {  float: right;  }
 /*footer*/
 #fco-footer-footwrap {  font-family: Arial, Helvetica, sans-serif;  width: 100%;  margin: 0 auto; background: #000; }
-#fco-footer-footBox {  margin: 0 auto;  height: auto; width:600px;  }
+#fco-footer-footBox {  margin: 0 auto;  height: auto; }
 #fco-footer-foot {  font-size: 13px;  height: 87px;  line-height: 16px;  width: auto; min-width: 608px; padding-top: 13px;  overflow: hidden;  color: #979797;  }
 .fco-footer-bottext {  display: inline;  font-size: 13px;  height: 55px;  line-height: 20px;  margin-top: 6px;  padding-left: 20px;  }
 .fco-footer-bottext a:link, .fco-footer-bottext a:visited {  font-size: 13px;  text-decoration: none;  color: #979797;  }
