@@ -99,6 +99,17 @@ class Footer {
                 })
             }
         }
+        let oFcoPcfooterWidth = document.getElementById('fco-footer-foot');
+        if(oFcoPcfooterWidth){
+            if(window.navigator.userAgent.indexOf('MSIE 7.0') !== -1){
+                let footBox = document.getElementById('fco-footer-footBox');
+                footBox.style.display = 'inline';
+                let offWidth = oFcoPcfooterWidth.offsetWidth;
+                footBox.style.display = 'block';
+                footBox.style.width = offWidth+10 + 'px';
+
+            }
+        }
     }
 
     zhHtml() {
