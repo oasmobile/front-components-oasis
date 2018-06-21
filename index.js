@@ -10,13 +10,19 @@ const gdpr = (data) => {
     return new GDPR(data);
 };
 
-if (typeof(fcoFooterConfig) !== 'undefined') {
-    footer(fcoFooterConfig);
-}
+let timeFooterConfig = setInterval(function(){
+    if (typeof(fcoFooterConfig) !== 'undefined') {
+        footer(fcoFooterConfig);
+        clearInterval(timeFooterConfig);
+    }
+}, 100);
+let timeGDPRConfig = setInterval(function () {
+    if (typeof(fcoGDPRConfig) !== 'undefined') {
+        gdpr(fcoGDPRConfig);
+        clearInterval(timeGDPRConfig);
+    }
+}, 100);
 
-if (typeof(fcoGDPRConfig) !== 'undefined') {
-    gdpr(fcoGDPRConfig);
-}
 
 exports = module.exports = {
     FcoFooter: footer,
