@@ -155,7 +155,7 @@ const langPackage = {
         footer_his : 'OASIS GAMES LIMITED.に著作権を所有する.',
         footer_notice :'著作者および発行者の許可なく転載・複製することを禁じます.',
         footer_privacy: 'プライバシー設置',
-        footer_Japanese:'特定商取引法に基づく表示'
+        footer_japanese:'特定商取引法に基づく表示'
     },
     //泰语
     'th': {
