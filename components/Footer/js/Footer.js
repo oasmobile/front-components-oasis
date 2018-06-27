@@ -23,9 +23,11 @@ class Footer {
         this.termSerHref = data.termSerHref  ||  `//www.oasgames.com/TermsofService(${this.langToCase}).html`;
         this.forumHref = data.forumHref  ||  `http://${this.langToCase}.forum.oasgames.com`;
         this.privacyHref = data.privacyHref  ||  `//www.oasgames.com/privacy_control/PrivacyControl(${this.langToCase}).html `;
+        this.japaneseHref = data.japaneseHref || `//www.oasgames.com/bill/Bill(JA).html`;
         this.fLogo = '//img.oasgames.com/upload/1505731497.png';
         this.logoMarginT = '0';
         this.forumBok = data.forumBok  ||  false;
+        this.japaneseBok = data.japaneseBok || false;
         this.fire(data.id);
     }
 
@@ -45,6 +47,7 @@ class Footer {
                                              | <a target="_blank" href="${this.priHref}">${this.langContent.footer_pri}</a>
                                              | <a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a> | <a target="_blank" href="${this.privacyHref}">${this.langContent.footer_privacy}</a>
                                             ${this.forumContent}
+                                            ${this.japaneseContent}
                                         </div>
                                         <p>©2012-${this.year} ${this.langContent.footer_his}</p>
                                         <p>${this.langContent.footer_notice}</p>
@@ -61,6 +64,7 @@ class Footer {
                     <a target="_blank" href="${this.termSerHref}">${this.langContent.footer_term_ser}</a> |
                     <a target="_blank" href="${this.privacyHref}">${this.langContent.footer_privacy}</a>
                     ${this.forumContent}
+                    ${this.japaneseContent}
                 </div>
                 <p>©2012-${this.year} ${this.langContent.footer_his}</p>
                 <p>${this.langContent.footer_notice}</p>
@@ -134,6 +138,11 @@ class Footer {
             this.forumContent = `<span> | <a target="_blank" href="${this.forumHref}">${this.langContent.footer_forum}</a></span>`;
         } else {
             this.forumContent = '';
+        }
+        if(this.japaneseBok){
+            this.japaneseContent = `<span> | <a target="_blank" href="${this.japaneseHref}">${this.langContent.footer_japanese}</a></span>`;
+        }else{
+            this.japaneseContent = '';
         }
     }
 
