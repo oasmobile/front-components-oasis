@@ -8,20 +8,20 @@ const langPackage = {
         "gdpr_btn": 'Confirm'
     },
     'tw': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(TW).html" target="_blank">here</a> to view it.',
-        "gdpr_btn": 'Confirm'
+        "gdpr_text": '為了更好的保障您的個人隱私安全，我們對隱私協議進行了完善。點選<a href="//www.oasgames.com/PrivacyPolicy(TW).html" target="_blank">這裡</a>進行查看。',
+        "gdpr_btn": '確認'
     },
     'tr': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(TR).html" target="_blank">here</a> to view it.',
-        "gdpr_btn": 'Confirm'
+        "gdpr_text": 'Kişisel güvenliğinizi korumak adına Gizlilik Anlaşması öneriyoruz.<a href="//www.oasgames.com/PrivacyPolicy(TR).html" target="_blank">BURAYA</a> tıklayarak göz atınız. ',
+        "gdpr_btn": 'Tamam'
     },
     'sv': {
         "gdpr_text": 'Vi har uppdaterat vår sekretesspolicy för att skydda uppgifter om dig bättre. Klicka <a href="//www.oasgames.com/PrivacyPolicy(SV).html" target="_blank">här</a> för mer info',
         "gdpr_btn": 'Godkänn'
     },
     'ru': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(RU).html" target="_blank">here</a> to view it.',
-        "gdpr_btn": 'Confirm'
+        "gdpr_text": 'Для лучшей защиты персональных данных мы улучшили политику конфиденциальности.Нажмите <a href="//www.oasgames.com/PrivacyPolicy(RU).html" target="_blank">здесь</a>, чтобы просмотреть.',
+        "gdpr_btn": 'ОК'
     },
     'pt': {
         "gdpr_text": 'Para melhor proteger sua privacidade, modificamos nossa política de privacidade, clique <a href="//www.oasgames.com/PrivacyPolicy(PT).html" target="_blank">aqui</a> para visualizá-la.',
@@ -52,25 +52,25 @@ const langPackage = {
         "gdpr_btn": 'Okay'
     },
     'ar': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(AR).html" target="_blank">here</a> to view it.',
-        "gdpr_btn": 'Confirm'
+        "gdpr_text": 'من أجل الحفاظ على امآن الخصوصية الخاصة بك، قمنا بتحسين إتفاقية الخصوصية. انقر على  لعرضها.<a href="//www.oasgames.com/PrivacyPolicy(AR).html" target="_blank">هنا</a>',
+        "gdpr_btn": 'تأكيد'
     },
     'es': {
         "gdpr_text": 'Para garantizar una mejor seguridad de su privacidad, hemos modificado nuestro acuerdo de privacidad. Haga clic <a href="//www.oasgames.com/PrivacyPolicy(ES).html" target="_blank">aquí</a> para ver.',
         "gdpr_btn": 'Confirmar'
     },
     'ja': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(JA).html" target="_blank">here</a> to view it.',
-        "gdpr_btn": 'Confirm'
+        "gdpr_text": '貴方のプライバシーを保護するため、プライバシーポリシーを更新しました。<a href="//www.oasgames.com/PrivacyPolicy(JA).html" target="_blank">ここ</a>をタップして見る。',
+        "gdpr_btn": '確認'
     },
     'th': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(TH).html" target="_blank">here</a> to view it.',
-        "gdpr_btn": 'Confirm'
+        "gdpr_text": 'เพื่อความเป็นส่วนตัวและความปลอดภัยส่วนบุคคล ทางเราได้เพิ่มนโยบายความปลอดภัยอย่างสมบูรณ์แบบตรวจสอบคลิก<a href="//www.oasgames.com/PrivacyPolicy(TH).html" target="_blank">ทีนี้</a>',
+        "gdpr_btn": 'ยืนยัน'
     },
     //越南语
     'vi': {
-        "gdpr_text": 'In order to better protect your privacy, we have modified our privacy policy, click <a href="//www.oasgames.com/PrivacyPolicy(VI).html" target="_blank">here</a> to view it.',
-        "gdpr_btn": 'Confirm'
+        "gdpr_text": 'Để bảo vệ tốt hơn riêng tư cá nhân của bạn, chúng tôi hoàn thiện thỏa thuận quyền riêng tư.Nhấp vào <a href="//www.oasgames.com/PrivacyPolicy(VI).html" target="_blank">Đây</a> để xem chi tiết. ',
+        "gdpr_btn": 'Xác nhận'
     }
 };
 
