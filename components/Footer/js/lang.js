@@ -9,13 +9,13 @@ const langPackage = {
         footer_privacy: 'Privacy Control'
     },
     'zh': {
-        footer_abus:'About US',
-        footer_pri:'Privacy Policy ',
-        footer_term_ser:'Terms of Service',
-        footer_forum:'Forum',
+        footer_abus:'关于我们',
+        footer_pri:'隐私权声明',
+        footer_term_ser:'服务条款',
+        footer_forum:'论坛',
         footer_his:'OASIS GAMES LIMITED. All rights reserved.',
-        footer_notice:'All trademarks referenced herein are the properties of their respective owners.',
-        footer_privacy: 'Privacy Control'
+        footer_notice:'这里所提的商标都是各自所有者的财产.',
+        footer_privacy: '隐私控制'
     },
     'tw': {
         footer_abus:'關於我們',

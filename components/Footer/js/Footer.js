@@ -118,13 +118,9 @@ class Footer {
 
     zhHtml() {
         if (this.lang === 'zh') {
-
             this.fLogo = '//img.oasgames.com/upload/1505731532.png';
             this.logoMarginT = '7px';
             this.oasgame = 'oasgames.com/pc/zh';
-            this.priHref = '//www.oasgames.com/PrivacyPolicy(EN).html';
-            this.termSerHref = '//www.oasgames.com/TermsofService(EN).html';
-            this.privacyHref = '//www.oasgames.com/privacy_control/PrivacyControl(EN).html';
         }
         else{
             this.footerBottomLang = 'en';
