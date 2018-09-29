@@ -1,8 +1,8 @@
 {
-    "name": "front-components-oasis",
-    "version": "1.1.5",
+    "name": "@oasis-games/front-components-oasis",
+    "version": "2.2.11",
     "description": "Oasis公共插件",
-    "main": "index.js",
+    "main": "Index.vue",
     "scripts": {
         "dev": "NODE_ENV=development webpack -d --progress --colors --watch",
         "test": "NODE_ENV=test webpack -d --progress --colors",
