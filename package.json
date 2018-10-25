@@ -1,6 +1,6 @@
 {
     "name": "@oasis-games/front-components-oasis",
-    "version": "2.2.11",
+    "version": "2.2.12",
     "description": "Oasis公共插件",
     "main": "Index.vue",
     "scripts": {

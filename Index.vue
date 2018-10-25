@@ -21,7 +21,7 @@
             fco: function () {
                 let script = document.createElement('script'),
                     DomScript = document.createElement('script');
-                script.src = 'http://img.oasgames.com/fc-oasis/production/v2.0.1.1/loader.min.js';
+                script.src = '//img.oasgames.com/fc-oasis/production/v2.0.1.1/loader.min.js';
                 script.async = "async";
                 switch (this.type) {
                     case 1:
