@@ -4,6 +4,7 @@
 
 const webpack = require('webpack');
 const es3ifyPlugin = require('es3ify-webpack-plugin');
+
 let env = JSON.stringify(process.env.NODE_ENV);
 let plugins = [
     new webpack.DefinePlugin({
@@ -34,6 +35,7 @@ module.exports = {
     entry: {
         runtime: './index.js',
         loader: './loader.js',
+        vue: './vue.js'
     },
     output: {
         path: './dist',

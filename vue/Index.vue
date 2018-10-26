@@ -13,6 +13,11 @@
             options: Object,
             type: Number
         },
+        data() {
+            return {
+                haha: 1
+            }
+        },
         name: "index",
         mounted() {
             this.fco();

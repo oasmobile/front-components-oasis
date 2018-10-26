@@ -1,0 +1,25 @@
+{
+    "name": "@oasis-games/front-components-oasis",
+    "version": "2.2.16",
+    "description": "Oasis公共插件",
+    "main": "dist/index.min.js",
+    "scripts": {
+        "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "publish": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/oasmobile/front-components-oasis.git"
+    },
+    "author": "Michael,Armand",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/oasmobile/front-components-oasis/issues"
+    },
+    "homepage": "https://github.com/oasmobile/front-components-oasis#readme",
+    "devDependencies": {
+        "laravel-mix": "^2.1.14"
+    }
+}

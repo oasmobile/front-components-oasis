@@ -1,23 +1,9 @@
 {
-    "name": "@oasis-games/front-components-oasis",
-    "version": "2.2.12",
-    "description": "Oasis公共插件",
-    "main": "Index.vue",
     "scripts": {
-        "dev": "NODE_ENV=development webpack -d --progress --colors --watch",
-        "test": "NODE_ENV=test webpack -d --progress --colors",
+        "dev"    : "NODE_ENV=development webpack -d --progress --colors --watch",
+        "test"   : "NODE_ENV=test webpack -d --progress --colors",
         "publish": "NODE_ENV=production webpack --progress --colors"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/oasmobile/front-components-oasis.git"
-    },
-    "author": "Michael,Armand",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/oasmobile/front-components-oasis/issues"
-    },
-    "homepage": "https://github.com/oasmobile/front-components-oasis#readme",
     "devDependencies": {
         "babel": "^6.5.2",
         "babel-core": "^6.9.1",
