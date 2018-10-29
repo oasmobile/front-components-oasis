@@ -13,7 +13,7 @@
             options: Object,
             type: Number
         },
-        name: "index",
+        name: "fco",
         mounted() {
             this.fco();
         },
