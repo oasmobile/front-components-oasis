@@ -1,6 +1,6 @@
 {
     "name": "@oasis-games/front-components-oasis",
-    "version": "2.2.16",
+    "version": "2.2.21",
     "description": "Oasis公共插件",
     "main": "dist/index.min.js",
     "scripts": {

@@ -13,11 +13,6 @@
             options: Object,
             type: Number
         },
-        data() {
-            return {
-                haha: 1
-            }
-        },
         name: "index",
         mounted() {
             this.fco();
@@ -36,8 +31,8 @@
                         DomScript.innerHTML = `var fcoGDPRConfig = ` + JSON.stringify(this.options);
                         break;
                 }
-                this.$refs.rawScrpit.append(script);
-                this.$refs.rawScrpit.append(DomScript);
+                this.$refs.rawScrpit.appendChild(script);
+                this.$refs.rawScrpit.appendChild(DomScript);
             }
         }
     }

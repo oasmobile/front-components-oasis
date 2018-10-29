@@ -1,3 +1,9 @@
-import Index from './Index.vue';
+import FcoComponents from './Fco.vue'
 
-export default Index;
+const Fco = {
+    install: function (Vue) {
+        Vue.component('fco', FcoComponents)
+    }
+};
+
+export default Fco;
