@@ -13,7 +13,7 @@
             options: Object,
             type: Number
         },
-        name: "index",
+        name: "fco",
         mounted() {
             this.fco();
         },
@@ -21,7 +21,7 @@
             fco: function () {
                 let script = document.createElement('script'),
                     DomScript = document.createElement('script');
-                script.src = 'http://img.oasgames.com/fc-oasis/production/v2.0.1.1/loader.min.js';
+                script.src = '//img.oasgames.com/fc-oasis/production/v2.0.1.1/loader.min.js';
                 script.async = "async";
                 switch (this.type) {
                     case 1:
@@ -31,8 +31,8 @@
                         DomScript.innerHTML = `var fcoGDPRConfig = ` + JSON.stringify(this.options);
                         break;
                 }
-                this.$refs.rawScrpit.append(script);
-                this.$refs.rawScrpit.append(DomScript);
+                this.$refs.rawScrpit.appendChild(script);
+                this.$refs.rawScrpit.appendChild(DomScript);
             }
         }
     }
