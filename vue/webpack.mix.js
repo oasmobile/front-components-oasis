@@ -10,4 +10,4 @@ mix.webpackConfig({
         libraryTarget: 'umd',
         umdNamedDefine: true
     }
-})
+});
