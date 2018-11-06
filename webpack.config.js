@@ -35,7 +35,6 @@ module.exports = {
     entry: {
         runtime: './index.js',
         loader: './loader.js',
-        vue: './vue.js'
     },
     output: {
         path: './dist',
@@ -62,3 +61,7 @@ module.exports = {
     },
     plugins: plugins
 };
+
+if (env === '"test"') {
+    module.exports.entry = {message: './message.js'};
+}

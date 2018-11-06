@@ -1,7 +1,12 @@
 {
+    "name": "@oasis-games/front-components-oasis-a",
+    "version": "2.3.0",
+    "description": "Oasis公共插件A级兼容",
+    "main": "dist/scripts/index.min.js",
     "scripts": {
-        "dev"    : "NODE_ENV=development webpack -d --progress --colors --watch",
-        "test"   : "NODE_ENV=test webpack -d --progress --colors",
+        "dev": "NODE_ENV=development webpack -d --progress --colors",
+        "watch": "NODE_ENV=development webpack -d --progress --colors --watch",
+        "test": "NODE_ENV=test webpack -d --progress --colors --watch",
         "publish": "NODE_ENV=production webpack --progress --colors"
     },
     "devDependencies": {
@@ -17,5 +22,15 @@
         "style-loader": "^0.13.1",
         "underscore": "^1.9.0",
         "webpack": "^1.13.3"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/oasmobile/front-components-oasis.git"
+    },
+    "author": "Michael,Armand,Hui",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/oasmobile/front-components-oasis/issues"
+    },
+    "homepage": "https://github.com/oasmobile/front-components-oasis#readme"
 }
