@@ -1,4 +1,3 @@
-import {message} from './index';
+import {FcoMessage} from './index';
 
-// console.log(haha);
-message(1, 'en');
+FcoMessage(1, 'zh');
