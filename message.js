@@ -1,3 +1,3 @@
 import {FcoMessage} from './index';
 
-FcoMessage(1, 'zh');
+FcoMessage(1,'zh');
