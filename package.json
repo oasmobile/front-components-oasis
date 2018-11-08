@@ -1,6 +1,6 @@
 {
     "name": "@oasis-games/front-components-oasis-a",
-    "version": "2.3.11",
+    "version": "2.4.11",
     "description": "Oasis公共插件A级兼容",
     "main": "dist/scripts/runtime.min.js",
     "scripts": {
