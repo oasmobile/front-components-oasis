@@ -13,7 +13,7 @@ let plugins = [
     new es3ifyPlugin()
 ];
 
-if (env === '"production"') {
+if (env === '"production"' || env === '"productiont"') {
     plugins = [
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
@@ -62,6 +62,6 @@ module.exports = {
     plugins: plugins
 };
 
-if (env === '"test"') {
+if (env === '"developmentt"' || env === '"productiont"') {
     module.exports.entry = {message: './message.js'};
 }
