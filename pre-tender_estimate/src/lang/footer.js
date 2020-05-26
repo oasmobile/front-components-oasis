@@ -37,7 +37,7 @@ const langPackage = {
         footer_notice:
             "Alle hier verwendeten Markenzeichen sind das Eigentum ihrer Besitzer.",
         footer_privacy: "Privatsphärekontrolle",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_charge: "Erneuerungsvertrag"
     },
     //葡萄牙
     pt: {
@@ -51,7 +51,7 @@ const langPackage = {
         footer_notice:
             "odas as marcas comerciais aqui contidas são propriedade de seus respectivos donos.",
         footer_privacy: "Controle de privacidade",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_charge: "Contrato de renovação"
     },
     //法语
     fr: {
@@ -65,7 +65,7 @@ const langPackage = {
         footer_notice:
             "Toutes les marques de fabrique mentionnées ici sont la propriété de leurs propriétaires respectifs.",
         footer_privacy: "Contrôle de confidentialité",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_charge: "Accord renouv."
     },
 
     //西班牙
@@ -80,7 +80,7 @@ const langPackage = {
         footer_notice:
             "Todas las marcas comerciales aquí mencionadas son propiedad de sus respectivos dueños.",
         footer_privacy: "Control de privacidad",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_charge: "Acuerdo de renovación"
     },
     tw: {
         footer_lowercase: "tw",
@@ -107,7 +107,7 @@ const langPackage = {
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_charge: "Yenileme Sözleşmesi"
     },
 
     //瑞典
@@ -136,7 +136,7 @@ const langPackage = {
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_charge: "Соглашение о продлении"
     },
     //波兰
     pl: {
