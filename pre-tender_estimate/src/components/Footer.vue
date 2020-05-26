@@ -66,7 +66,7 @@
                         >
                             {{ lang.footer_privacy }}
                         </a>
-                        <template v-if="this.options.gamecode !== undefined">
+                        <template v-if="this.options.gamecode !== undefined && this.options.gamecode.length !== 0 && autoSub">
                             |
                             <a
                                 target="_blank"
@@ -140,7 +140,7 @@
                 >
                     {{ lang.footer_privacy }}
                 </a>
-                <template v-if="this.options.gamecode !== undefined">
+                <template v-if="this.options.gamecode !== undefined && this.options.gamecode.length !== 0 && autoSub">
                     |
                     <a
                         target="_blank"
@@ -182,7 +182,7 @@ export default {
         lang: function() {
             return langPackage[this.options.lang] === undefined
                 ? langPackage["en"]
-                : langPackage[this.lang];
+                : langPackage[this.options.lang];
             // console.log(this.options)
         },
         // gamecode:()=>{
@@ -193,6 +193,12 @@ export default {
         footerHis: function() {
             let date = new Date();
             return date.getFullYear() + " " + this.lang.footer_his;
+        },
+        autoSub: function() {
+            let allowlangs = process.env.VUE_APP_CONTROL_LANG.toLocaleLowerCase();
+            allowlangs = allowlangs.split(",");
+
+            return this.options.lang === undefined ? false : allowlangs.includes(this.options.lang.toLocaleLowerCase());
         }
     },
     created() {
