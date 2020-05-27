@@ -77,7 +77,7 @@
                             <a
                                 target="_blank"
                                 :href="
-                                    'https://profile.tapdrop.games/' +
+                                    'https://sandbox-user-center.oasgames.com/' +
                                         'static-page/' +
                                         this.options.gamecode +
                                         '/auto-subscription-agreement-' +
@@ -157,7 +157,7 @@
                     <a
                         target="_blank"
                         :href="
-                            'https://profile.tapdrop.games/' +
+                            'https://sandbox-user-center.oasgames.com/' +
                                 'static-page/' +
                                 this.options.gamecode +
                                 '/auto-subscription-agreement-' +
@@ -195,13 +195,7 @@ export default {
             return langPackage[this.options.lang] === undefined
                 ? langPackage["en"]
                 : langPackage[this.options.lang];
-            // console.log(this.options)
         },
-        // gamecode:()=>{
-        //     if(this.options.gamecode===undefined){
-        //
-        //     }
-        // },
         footerHis: function() {
             let date = new Date();
             return date.getFullYear() + " " + this.lang.footer_his;
@@ -215,20 +209,7 @@ export default {
                 : allowlangs.includes(this.options.lang.toLocaleLowerCase());
         }
     },
-    created() {
-        // getCescharge(){
-        //     return request({
-        //         type: "jsonp",
-        //         url: constants.urls.GET_LIST_FROM_CES,
-        //         data: {
-        //             type: -1,
-        //             parent_id: "mpken"
-        //         }
-        //     }).then(res => {
-        //         return res.result;
-        //     });
-        // }
-    }
+    created() {}
 };
 </script>
 
