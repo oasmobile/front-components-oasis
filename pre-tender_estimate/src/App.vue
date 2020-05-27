@@ -8,8 +8,8 @@ export default {
     data() {
         return {
             footerConfig: {
-                lang: "",
-                gamecode:"",
+                lang: "th",
+                gamecode: "mhhja"
             },
             dialogVisible: true
         };

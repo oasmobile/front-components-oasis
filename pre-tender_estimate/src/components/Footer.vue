@@ -23,7 +23,7 @@
                             target="_blank"
                             :href="
                                 'https://oasgames.com/pc/' +
-                                    lang +
+                                    lang.footer_lowercase +
                                     '/company.html'
                             "
                             rel="nofollow"
@@ -77,7 +77,7 @@
                             <a
                                 target="_blank"
                                 :href="
-                                    'https://sandbox-user-center.oasgames.com/' +
+                                    'https://profile.oasgames.com/' +
                                         'static-page/' +
                                         this.options.gamecode +
                                         '/auto-subscription-agreement-' +
@@ -157,7 +157,7 @@
                     <a
                         target="_blank"
                         :href="
-                            'https://sandbox-user-center.oasgames.com/' +
+                            'https://profile.oasgames.com/' +
                                 'static-page/' +
                                 this.options.gamecode +
                                 '/auto-subscription-agreement-' +
@@ -187,7 +187,8 @@ export default {
     data() {
         return {
             privacyHref: "//www.oasgames.com/",
-            isMobile: isMobile.any
+            isMobile: isMobile.any,
+            langlist: "en,de,es,fr,pt,ru,tr"
         };
     },
     computed: {
@@ -201,7 +202,7 @@ export default {
             return date.getFullYear() + " " + this.lang.footer_his;
         },
         autoSub: function() {
-            let allowlangs = process.env.VUE_APP_CONTROL_LANG.toLocaleLowerCase();
+            let allowlangs = this.langlist.toLocaleLowerCase();
             allowlangs = allowlangs.split(",");
 
             return this.options.lang === undefined

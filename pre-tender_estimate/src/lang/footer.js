@@ -22,7 +22,7 @@ const langPackage = {
         footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
+        footer_privacy: "隐私控制",
         footer_charge: "Auto-Subscription Agreement"
     },
     //德语
@@ -99,14 +99,14 @@ const langPackage = {
     tr: {
         footer_lowercase: "tr",
         footer_capital: "(TR)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
+        footer_abus: "Hakkımızda",
+        footer_pri: "Gizlilik Politikası ",
+        footer_term_ser: "Servis",
         footer_forum: "Forum",
         footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
+            "Burada adı geçen tüm markalar kendi sahiplerinin mülkiyetindedir.",
+        footer_privacy: "Gizlilik Kontrolü",
         footer_charge: "Yenileme Sözleşmesi"
     },
 
@@ -128,14 +128,14 @@ const langPackage = {
     ru: {
         footer_lowercase: "ru",
         footer_capital: "(RU)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
+        footer_abus: "О нас",
+        footer_pri: "Политика конфид-ти ",
+        footer_term_ser: "Пользовательское соглашение",
         footer_forum: "Forum",
         footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
+            "Все упомянутые торговые марки являются соб-стью соотв-щих владельцев.",
+        footer_privacy: "Контроль конфиденциальности",
         footer_charge: "Соглашение о продлении"
     },
     //波兰
