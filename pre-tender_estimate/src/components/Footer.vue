@@ -6,7 +6,9 @@
                     <a
                         :href="
                             '//oasgames.com/pc/' +
-                                 (this.options.lang.toLowerCase() === 'zh' ? 'zh' : 'en') +
+                                (this.options.lang.toLowerCase() === 'zh'
+                                    ? 'zh'
+                                    : 'en') +
                                 '/company.html'
                         "
                     >
@@ -23,7 +25,9 @@
                             target="_blank"
                             :href="
                                 '//oasgames.com/pc/' +
-                                    (this.options.lang.toLowerCase() === 'zh' ? 'zh' : 'en') +
+                                    (this.options.lang.toLowerCase() === 'zh'
+                                        ? 'zh'
+                                        : 'en') +
                                     '/company.html'
                             "
                             rel="nofollow"
@@ -103,7 +107,9 @@
                     target="_blank"
                     :href="
                         '//oasgames.com/pc/' +
-                             (this.options.lang.toLowerCase() === 'zh' ? 'zh' : 'en') +
+                            (this.options.lang.toLowerCase() === 'zh'
+                                ? 'zh'
+                                : 'en') +
                             '/company.html'
                     "
                     rel="nofollow"
@@ -208,8 +214,7 @@ export default {
             return this.options.lang === undefined
                 ? false
                 : allowlangs.includes(this.options.lang.toLocaleLowerCase());
-        },
-
+        }
     },
     created() {}
 };
