@@ -1,5 +1,5 @@
 {
-    "name": "@oasis-games/front-components-oasis",
+    "name": "@oasis-games/front-components-oasis-vue",
     "version": "1.0.0",
     "main": "src/index.js",
     "scripts": {

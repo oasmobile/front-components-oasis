@@ -1,4 +1,4 @@
-# front-components-oasis
+# front-components-oasis-vue
 
 A simple Vue components for page footer.
 
@@ -21,7 +21,7 @@ npm run build
 ```
 Vue Global registration:
 
-import Fco from @oasis-games/front-components-oasis;
+import Fco from @oasis-games/front-components-oasis-vue;
 Vue.use(Fco)
 
 <template>
