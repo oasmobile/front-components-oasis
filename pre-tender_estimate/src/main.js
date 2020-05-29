@@ -1,9 +1,9 @@
 import Vue from "vue";
-import Fcs from "./index";
+import Fco from "./index";
 import App from "./App.vue";
 
 Vue.config.productionTip = false;
-Vue.use(Fcs);
+Vue.use(Fco);
 
 new Vue({
     render: h => h(App)

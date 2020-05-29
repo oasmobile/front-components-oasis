@@ -1,4 +1,4 @@
-# front-components-succotash
+# front-components-oasis
 
 A simple Vue components for page footer.
 
@@ -21,19 +21,13 @@ npm run build
 ```
 Vue Global registration:
 
-import Fcs from @oasis-games/front-components-succotash;
-Vue.use(Fcs)
+import Fco from @oasis-games/front-components-oasis;
+Vue.use(Fco)
 
 <template>
    <div id="footer">
-       <fcs-footer :options="footerConfig"></fcs-footer>
+       <fco-footer :options="footerConfig"></fco-footer>
    </div>
-   <fcs-login-reg
-       :options="LoginRegConfig"
-       :dialogVisible="dialogVisible"
-       @close="close"
-       @loginCallBack="loginCallBack">
-   </fcs-login-reg>
 </template>
 
 <script>
@@ -42,13 +36,8 @@ export default {
    data() {
        return {
            footerConfig: {
-               lang: "en"
-           },
-           LoginRegConfig: {
-               lang: 'ar',
-               appId: "137082913339273",
-               client: 'mbeen',
-               isDebug: true,
+               lang: "en",
+               gamecode: "mrthen"
            }
        };
    }

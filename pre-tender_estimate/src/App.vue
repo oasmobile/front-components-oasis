@@ -1,5 +1,5 @@
 <template>
-    <div id="app"><fcs-footer :options="footerConfig"></fcs-footer></div>
+    <div id="app"><fco-footer :options="footerConfig"></fco-footer></div>
 </template>
 
 <script>

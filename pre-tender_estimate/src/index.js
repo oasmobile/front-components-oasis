@@ -1,11 +1,9 @@
 import Footer from "./components/Footer.vue";
-// import LoginReg from "./components/LoginReg.vue";
 
-const Fcs = {
+const Fco = {
     install: function(Vue) {
-        Vue.component("fcs-footer", Footer);
-        // Vue.component("fcs-login-reg", LoginReg);
+        Vue.component("fco-footer", Footer);
     }
 };
 
-export default Fcs;
+export default Fco;
