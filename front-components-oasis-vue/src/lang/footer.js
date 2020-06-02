@@ -6,7 +6,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Settings",
@@ -19,7 +19,7 @@ const langPackage = {
         footer_pri: "隐私协议",
         footer_term_ser: "服务条款",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "隐私控制",
@@ -33,7 +33,7 @@ const langPackage = {
         footer_pri: "Privatsphärerichtlinien",
         footer_term_ser: "Nutzungsbedingungen",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "Alle hier verwendeten Markenzeichen sind das Eigentum ihrer Besitzer.",
         footer_privacy: "Privatsphärekontrolle",
@@ -47,7 +47,7 @@ const langPackage = {
         footer_pri: "Política de privacidade",
         footer_term_ser: "Termos de serviço",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "odas as marcas comerciais aqui contidas são propriedade de seus respectivos donos.",
         footer_privacy: "Controle de privacidade",
@@ -61,7 +61,7 @@ const langPackage = {
         footer_pri: "Politique de confidentialité",
         footer_term_ser: "Conditions d'utilisation",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "Toutes les marques de fabrique mentionnées ici sont la propriété de leurs propriétaires respectifs.",
         footer_privacy: "Contrôle de confidentialité",
@@ -76,7 +76,7 @@ const langPackage = {
         footer_pri: "Acuerdo de privacidad",
         footer_term_ser: "Términos de servicio",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "Todas las marcas comerciales aquí mencionadas son propiedad de sus respectivos dueños.",
         footer_privacy: "Control de privacidad",
@@ -89,7 +89,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -103,7 +103,7 @@ const langPackage = {
         footer_pri: "Gizlilik Politikası ",
         footer_term_ser: "Servis",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "Burada adı geçen tüm markalar kendi sahiplerinin mülkiyetindedir.",
         footer_privacy: "Gizlilik Kontrolü",
@@ -118,7 +118,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -132,7 +132,7 @@ const langPackage = {
         footer_pri: "Политика конфид-ти ",
         footer_term_ser: "Пользовательское соглашение",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "Все упомянутые торговые марки являются соб-стью соотв-щих владельцев.",
         footer_privacy: "Контроль конфиденциальности",
@@ -146,7 +146,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -160,7 +160,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -174,7 +174,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -189,7 +189,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -203,7 +203,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -218,7 +218,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -232,7 +232,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
@@ -246,7 +246,7 @@ const langPackage = {
         footer_pri: "Privacy Policy ",
         footer_term_ser: "Terms of Service",
         footer_forum: "Forum",
-        footer_his: "HYDROGEN GAMES LIMITED. All rights reserved.",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
