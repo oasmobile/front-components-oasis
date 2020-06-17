@@ -18,12 +18,11 @@ const langPackage = {
         footer_abus: "关于我们",
         footer_pri: "隐私协议",
         footer_term_ser: "服务条款",
-        footer_forum: "Forum",
+        footer_forum: "论坛",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
-        footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
+        footer_notice: "这里所提的商标都是各自所有者的财产。",
         footer_privacy: "隐私控制",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_charge: "自动续订协议"
     },
     //德语
     de: {
@@ -49,7 +48,7 @@ const langPackage = {
         footer_forum: "Forum",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "odas as marcas comerciais aqui contidas são propriedade de seus respectivos donos.",
+            "Todas as marcas comerciais aqui contidas são propriedades de seus respectivos donos.",
         footer_privacy: "Controle de privacidade",
         footer_charge: "Contrato de renovação"
     },
@@ -57,7 +56,7 @@ const langPackage = {
     fr: {
         footer_lowercase: "fr",
         footer_capital: "(FR)",
-        footer_abus: "A propos de nous",
+        footer_abus: "A propos",
         footer_pri: "Politique de confidentialité",
         footer_term_ser: "Conditions d'utilisation",
         footer_forum: "Forum",
@@ -75,7 +74,7 @@ const langPackage = {
         footer_abus: "Sobre nosotros",
         footer_pri: "Acuerdo de privacidad",
         footer_term_ser: "Términos de servicio",
-        footer_forum: "Forum",
+        footer_forum: "Foro",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "Todas las marcas comerciales aquí mencionadas son propiedad de sus respectivos dueños.",
@@ -85,15 +84,14 @@ const langPackage = {
     tw: {
         footer_lowercase: "tw",
         footer_capital: "(TW)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
-        footer_forum: "Forum",
+        footer_abus: "關於我們",
+        footer_pri: "隱私協議 ",
+        footer_term_ser: "服務條款",
+        footer_forum: "論壇",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
-        footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_notice: "這裡所提的商標都是各自所有者的財產。",
+        footer_privacy: "隱私控制",
+        footer_charge: "自動續訂協議"
     },
     //土语
     tr: {
@@ -101,7 +99,7 @@ const langPackage = {
         footer_capital: "(TR)",
         footer_abus: "Hakkımızda",
         footer_pri: "Gizlilik Politikası ",
-        footer_term_ser: "Servis",
+        footer_term_ser: "Kullanım Şartları",
         footer_forum: "Forum",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
@@ -114,15 +112,15 @@ const langPackage = {
     sv: {
         footer_lowercase: "sv",
         footer_capital: "(SV)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
+        footer_abus: "Om oss",
+        footer_pri: "Integritetspolicy",
+        footer_term_ser: "Användaravtal",
         footer_forum: "Forum",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+            "Alla varumärken som hänvisas till här ägs av sina respektive ägare.",
+        footer_privacy: "Integritetsinställningar",
+        footer_charge: "Automatisk förnyelse"
     },
     //俄语
     ru: {
@@ -131,7 +129,7 @@ const langPackage = {
         footer_abus: "О нас",
         footer_pri: "Политика конфид-ти ",
         footer_term_ser: "Пользовательское соглашение",
-        footer_forum: "Forum",
+        footer_forum: "Форум",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
             "Все упомянутые торговые марки являются соб-стью соотв-щих владельцев.",
@@ -142,15 +140,15 @@ const langPackage = {
     pl: {
         footer_lowercase: "pl",
         footer_capital: "(PL)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
+        footer_abus: "O nas",
+        footer_pri: "Polityka prywatności",
+        footer_term_ser: "Warunki świadczenia usług",
         footer_forum: "Forum",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+            "Wszystkie pozostałe wymienione znaki towarowe należą do ich właścicieli. ",
+        footer_privacy: "Kontrola prywatności",
+        footer_charge: "Porozumienie automatycznego odnawiania subskrypcji"
     },
     //荷兰
     nl: {
@@ -170,15 +168,15 @@ const langPackage = {
     it: {
         footer_lowercase: "it",
         footer_capital: "(IT)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
+        footer_abus: "Chi siamo",
+        footer_pri: "Informativa sulla privacy",
+        footer_term_ser: "Termini di servizio",
         footer_forum: "Forum",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+            "Tutti i marchi qui citati appartengono ai rispettivi proprietari.",
+        footer_privacy: "Impostazioni privacy",
+        footer_charge: "Accordo di abbonamento automatico"
     },
 
     //希腊
@@ -199,44 +197,43 @@ const langPackage = {
     ar: {
         footer_lowercase: "ar",
         footer_capital: "(AR)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
-        footer_forum: "Forum",
+        footer_abus: "معلومات عنا ",
+        footer_pri: "سياسة الخصوصية",
+        footer_term_ser: "شروط الخدمة",
+        footer_forum: "المنتدى",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+            "جميع العلامات التجارية المشار إليها هنا هي ملك لأصحابها.",
+        footer_privacy: "إعدادت الخصوصية",
+        footer_charge: "اتفاقية الاشتراك التلقائي"
     },
 
     //日语
     ja: {
         footer_lowercase: "ja",
         footer_capital: "(JA)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
-        footer_forum: "Forum",
+        footer_abus: "私たちについて",
+        footer_pri: "プライバシーポリシー",
+        footer_term_ser: "サービス契約",
+        footer_forum: "フォーラム",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
-        footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+        footer_notice: "ここで言及されている商標はすべてその所有者の財産です。",
+        footer_privacy: "プライバシー設定",
+        footer_charge: "自動購読契約"
     },
     //泰语
     th: {
         footer_lowercase: "th",
         footer_capital: "(TH)",
-        footer_abus: "About US",
-        footer_pri: "Privacy Policy ",
-        footer_term_ser: "Terms of Service",
-        footer_forum: "Forum",
+        footer_abus: "เกี่ยวกับเรา",
+        footer_pri: "นโยบายความเป็นส่วนตัว ",
+        footer_term_ser: "เงื่อนไขการให้บริการ",
+        footer_forum: "กระทู้",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "All trademarks referenced herein are the properties of their respective owners.",
-        footer_privacy: "Privacy Control",
-        footer_charge: "Auto-Subscription Agreement"
+            "เครื่องหมายการค้าทั้งหมดที่อ้างถึงนี้ เป็นทรัพย์สินส่วนบุคคล",
+        footer_privacy: "ตั้งค่าความส่วนตัว",
+        footer_charge: "ต่ออายุอัตโนมัติ"
     },
     //越南语
     vi: {
