@@ -62,8 +62,8 @@ const langPackage = {
         footer_forum: "Forum",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "Toutes les marques de fabrique mentionnées ici sont la propriété de leurs propriétaires respectifs.",
-        footer_privacy: "Contrôle de confidentialité",
+            "Toutes les marques commerciales mentionnées ici appartiennent à leurs propriétaires respectifs.",
+        footer_privacy: "Paramètres de confidentialité",
         footer_charge: "Accord renouv."
     },
 
@@ -77,7 +77,7 @@ const langPackage = {
         footer_forum: "Foro",
         footer_his: "OASIS GAMES LIMITED. All rights reserved.",
         footer_notice:
-            "Todas las marcas comerciales aquí mencionadas son propiedad de sus respectivos dueños.",
+            "Todas las marcas comerciales mencionadas aquí son propiedad de sus respectivos dueños.",
         footer_privacy: "Control de privacidad",
         footer_charge: "Acuerdo de renovación"
     },
@@ -248,6 +248,18 @@ const langPackage = {
             "All trademarks referenced herein are the properties of their respective owners.",
         footer_privacy: "Privacy Control",
         footer_charge: "Auto-Subscription Agreement"
+    },
+    ko: {
+        footer_lowercase: "ko",
+        footer_capital: "(KO)",
+        footer_abus: "소개",
+        footer_pri: "개인정보 보호정책 ",
+        footer_term_ser: "서비스 조항",
+        footer_forum: " 포럼",
+        footer_his: "OASIS GAMES LIMITED. All rights reserved.",
+        footer_notice: "모든 상표는 저작권법에 의거하여 보호됩니다.",
+        footer_privacy: "개인정보 설정",
+        footer_charge: "자동 결제 조항"
     }
 };
 
