@@ -32,12 +32,16 @@ class Footer {
             `//www.oasgames.com/privacy_control/PrivacyControl(${
                 this.langToCase
             }).html `;
+        this.cookiesPolicyHref =
+            data.cookiesPolicyHref ||
+            `//www.oasgames.com/CookiesPolicy(${this.langToCase}).html`;
         this.billHref =
             data.billHref || `//www.oasgames.com/bill/Bill(JA).html`;
         this.fLogo = "//img.oasgames.com/upload/1505731497.png";
         this.logoMarginT = "0";
         this.forumBok = data.forumBok || false;
         this.billBok = data.billBok || false;
+        this.cookiesPolicyBok = data.cookiesPolicyBok || false;
         this.fire(data.id);
     }
 
@@ -78,6 +82,7 @@ class Footer {
         }</a>
                                             ${this.forumContent}
                                             ${this.billContent}
+                                            ${this.cookiesPolicyContent}
                                         </div>
                                         <p>©2012-${this.year} ${
             this.langContent.footer_his
@@ -109,6 +114,7 @@ class Footer {
         }</a>
                     ${this.forumContent}
                     ${this.billContent}
+                    ${this.cookiesPolicyContent}
                 </div>
                 <p>©2012-${this.year} ${this.langContent.footer_his}</p>
                 <p>${this.langContent.footer_notice}</p>
@@ -190,6 +196,13 @@ class Footer {
             }">${this.langContent.footer_bill}</a></span>`;
         } else {
             this.billContent = "";
+        }
+        if (this.cookiesPolicyBok) {
+            this.cookiesPolicyContent = `<span> | <a target="_blank" href="${
+                this.cookiesPolicyHref
+            }">${this.langContent.footer_cookies_policy}</a></span>`;
+        } else {
+            this.cookiesPolicyContent = "";
         }
     }
 }
